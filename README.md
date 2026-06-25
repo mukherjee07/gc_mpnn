@@ -101,3 +101,42 @@ All codes have been tested on:
  
 Hyperparameter optimization protocol
 <img width="12657" height="6229" alt="Figure_3" src="https://github.com/user-attachments/assets/28ae56a9-fdb2-4536-a5ce-3941c1a4b8f2" />
+ 
+---
+ 
+## Data sources and acknowledgements
+ 
+The datasets in `data/` come from prior work by other groups, and we gratefully
+acknowledge them. Please cite the original sources if you use these data.
+ 
+### Training set — `Gas_permeability_solubility_diffusivity_wide.csv`
+ 
+This dataset was developed by **Rampi Ramprasad's group**. If you use it, please
+cite:
+ 
+> Phan, B.K., Shen, KH., Gurnani, R. et al. *Gas permeability, diffusivity, and
+> solubility in polymers: Simulation-experiment data fusion and multi-task
+> machine learning.* npj Computational Materials **10**, 186 (2024).
+> https://doi.org/10.1038/s41524-024-01373-9
+ 
+```bibtex
+@article{Phan2024,
+  title   = {Gas permeability, diffusivity, and solubility in polymers: Simulation-experiment data fusion and multi-task machine learning},
+  author  = {Phan, B. K. and Shen, K.-H. and Gurnani, R. and Tran, H. and Lively, R. and Ramprasad, R.},
+  journal = {npj Computational Materials},
+  volume  = {10},
+  pages   = {186},
+  year    = {2024},
+  doi     = {10.1038/s41524-024-01373-9}
+}
+```
+ 
+### Test set — `new_test_set.csv`
+ 
+The experimental permeability values were collected from the **Membrane Society
+of Australasia** Polymer Gas Separation Membrane Database. The polymer SMILES
+(p-SMILES) in this file were **manually curated and added by us**.
+ 
+> A. W. Thornton, B. D. Freeman and L. M. Robeson. *Polymer Gas Separation
+> Membrane Database* (2012).
+> https://membrane-australasia.org/polymer-gas-separation-membrane-database/
