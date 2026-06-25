@@ -18,23 +18,6 @@ folders read their data from here, so keep these files in place.
   database (Thornton et al., 2012); the p-SMILES were manually curated and added
   by us — see citations below.
 
-- `clean.py` — a small helper that drops a few columns from `new_test_set.csv`
-  and writes `new_test_set_cleaned.csv`. Optional; only run it if you need that
-  cleaned version.
-
-## Running the helper (optional)
-
-```bash
-cd data
-python clean.py
-```
-
-Needs only pandas:
-
-```bash
-pip install pandas
-```
-
 ## Data sources and citations
 
 We gratefully acknowledge the original sources of these datasets. Please cite
