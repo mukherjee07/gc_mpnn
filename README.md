@@ -134,8 +134,11 @@ All codes have been tested on:
  
 Hyperparameters are tuned with a **leave-one-gas-out (LOGO)** protocol: for each
 held-out test species, the model is optimized on the **5 remaining gas species**
-while that one **test species is always kept out**. Rotating the held-out
-species means **all six gas species are tested this way**, one at a time.
+while that one **test species is always kept out**. Within those 5 base gases,
+the **validation gas is itself rotated** — each of the five takes a turn as the
+validation gas while the other four are used for training — and the objective is
+averaged over these rotations. Rotating the held-out test species in turn means
+**all six gas species are tested this way**, one at a time.
  
 For the final-test-set evaluation, the optimization is extended to all **6 gases
 (5 for training + 1 for validation)**. For **each Bayesian (Optuna) iteration**,
