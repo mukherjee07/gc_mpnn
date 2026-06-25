@@ -1,0 +1,39 @@
+{
+  "experiment": "Kinetic",
+  "test_gas": "CO2",
+  "n_ensemble": 20,
+  "base_seed": 1000,
+  "diversity": "bootstrap_resampling + unique_seed_per_member",
+  "hyperparameters": {
+    "learning_rate": 2.214904218133083e-05,
+    "l2_lambda": 0.00524222708006489,
+    "hidden_dim": 512,
+    "num_mp_layers": 5,
+    "fusion_dim": 32,
+    "dropout": 0.04975910889419488,
+    "pooling": "attention",
+    "batch_size": 8
+  },
+  "ensemble_test_metrics": {
+    "r2": 0.10180973185102915,
+    "rmse": 1.1119940854153616,
+    "mae": 1.0645718545263017
+  },
+  "ensemble_pool_metrics": {
+    "r2": 0.04422735662469779,
+    "rmse": 1.33306451936231,
+    "mae": 1.083878736340208
+  },
+  "calibration_95pct_PI": {
+    "picp_95": 0.040372670807453416,
+    "mpiw_95": 0.7416779188063376,
+    "nmpiw_95": 0.09999938669497559,
+    "ci_sharpness_note": "Under-dispersed (overconfident)"
+  },
+  "member_test_r2": {
+    "mean": 0.07041735012031083,
+    "std": 0.17206662821935373,
+    "min": -0.19237872357012686,
+    "max": 0.5605779019436986
+  }
+}

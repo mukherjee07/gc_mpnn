@@ -1,38 +1,40 @@
 #!/usr/bin/env python
 # coding: utf-8
 """
-Gas-Conditioned MPNN - Proper Nested HPO + Final LOGO Evaluation
-=================================================================
+Gas-Conditioned MPNN - HPO on ALL 6 Gases + Save Pretrained Model
+==================================================================
 
-Stage 1 - Optuna HPO  (TEST_GAS is COMPLETELY LOCKED AWAY)
-    Training pool = all gases EXCEPT TEST_GAS
+Goal
+----
+Train a GC-MPNN on all six gases (He, H2, N2, O2, CH4, CO2) so that
+the resulting model can be used as a pretrained backbone for predicting
+H2S permeability (which has no labelled data for validation).
+
+Stage 1 - Optuna HPO
+    Training pool = ALL 6 gases
     For each Optuna trial:
-      For each gas V in the training pool:
+      For each gas V in {He, H2, N2, O2, CH4, CO2}:
         val_graphs   = graphs for gas V
-        train_graphs = graphs for all other pool gases
+        train_graphs = graphs for the other 5 gases
         Train, evaluate inner val MSE
-      Mean of all inner val MSEs  ->  Optuna objective (minimise)
-    The TEST_GAS never appears in any Stage 1 computation.
+      Mean of inner val MSEs  ->  Optuna objective (minimise)
 
-Stage 2 - Final Evaluation  (TEST_GAS unlocked)
-    Train on full training pool (all non-test gases)
-    Evaluate on TEST_GAS
-    Save predictions to CSV for parity plot
+Stage 2 - Final Training
+    Train on ALL 6 gases combined with the best hyperparameters.
+    Save:
+      - Model weights        : gc_mpnn_pretrained.pt
+      - Full checkpoint      : gc_mpnn_pretrained_checkpoint.pt
+        (includes weights, scalers, hyperparams, gas feature config)
 
-Run for all 6 descriptor experiments.
-TEST_GAS = 'CO2' by default (change at the top of the file).
+The checkpoint is self-contained for H2S inference - load it, pass a
+polymer graph + H2S gas features, and get a log10-Barrer prediction.
 
-No plots generated - all outputs saved as CSV.
-
-Outputs per experiment
-----------------------
-    {experiment}_test_{TEST_GAS}_predictions.csv
-    {experiment}_train_pool_predictions.csv
-    {experiment}_optuna_trials.csv
-    {experiment}_best_params.json
-    all_experiments_summary.csv
-    optuna_logo_results.pt
-
+Outputs
+-------
+    gc_mpnn_pretrained.pt              - model state_dict only
+    gc_mpnn_pretrained_checkpoint.pt   - full inference checkpoint
+    all6_optuna_trials.csv             - Optuna trial history
+    all6_best_params.json              - best hyperparameters
 """
 
 import pandas as pd
@@ -80,27 +82,34 @@ def set_seeds(seed=42):
 set_seeds(42)
 
 # KEY SETTINGS
-TEST_GAS        = 'CO2'   # locked away during all of Stage 1 HPO
-N_OPTUNA_TRIALS = 150
-HPO_EPOCHS      = 100     # epochs per inner rotation fold
-HPO_PATIENCE    = 15
-FINAL_EPOCHS    = 500     # epochs for Stage 2 final training
+N_OPTUNA_TRIALS = 75
+HPO_EPOCHS      = 100
+HPO_PATIENCE    = 20
+FINAL_EPOCHS    = 500
 FINAL_PATIENCE  = 100
 
-ALL_GASES     = ['He', 'H2', 'N2', 'O2', 'CH4', 'CO2']
-TRAINING_POOL = [g for g in ALL_GASES if g != TEST_GAS]
+# All 6 gases used for both HPO and final training - no gas is locked away
+ALL_GASES = ['He', 'H2', 'N2', 'O2', 'CH4', 'CO2']
 
-print(f"\nTest gas (locked away in Stage 1) : {TEST_GAS}")
-print(f"Training pool for HPO             : {TRAINING_POOL}")
+# Gas descriptor experiment to use for the pretrained model
+# Change this if you want a different descriptor set (see EXPERIMENT_CONFIGS below)
+EXPERIMENT_NAME = 'Kinetic'
+
+print(f"\nAll gases used for HPO and training: {ALL_GASES}")
+print(f"Gas descriptor experiment           : {EXPERIMENT_NAME}")
 
 # GAS PROPERTIES
+# Electrostatic descriptors updated vs. original code:
+# q_pos / q_neg  ->  q, alpha
 # q     = |q|, magnitude of partial charge on positive site (dimensionless)
-# For CO2: C site carries +0.70; for N2: N site carries +0.964.
-# Nonpolar gases (He, H2, CH4) remain 0.
+# (TraPPE / force-field parameterisation)
 # alpha = static isotropic dipole polarizability (A3)
-# Source: NIST CCCBDB experimental list (Olney et al. 1997)
+# Source: NIST CCCBDB (Olney et al. 1997)
 # He=0.208, H2=0.787, O2=1.562, N2=1.710, CH4=2.448, CO2=2.507
-#
+# H2S=3.631 (NIST CCCBDB)
+# Rationale: q_pos and q_neg were perfectly correlated (r~1.0) - one was
+# redundant. alpha independently captures induced-dipole / dispersion
+# interactions, which are especially important for CO2 and H2S.
 GAS_PROPERTIES = {
     'He':  {'sigma': 2.551, 'epsilon':  10.2,  'omega': -0.383, 'Tc':   5.2, 'Pc':  2.28, 'd': 2.6,  'Vd':  2.67, 'q': 0.0,   'alpha': 0.208},
     'H2':  {'sigma': 2.827, 'epsilon':  59.7,  'omega': -0.265, 'Tc':  33.2, 'Pc': 13.00, 'd': 2.89, 'Vd':  6.12, 'q': 0.0,   'alpha': 0.787},
@@ -108,8 +117,7 @@ GAS_PROPERTIES = {
     'O2':  {'sigma': 3.467, 'epsilon': 106.7,  'omega':  0.022, 'Tc': 154.6, 'Pc': 50.43, 'd': 3.46, 'Vd': 16.3,  'q': 0.226, 'alpha': 1.562},
     'CH4': {'sigma': 3.758, 'epsilon': 148.6,  'omega':  0.011, 'Tc': 190.6, 'Pc': 46.1,  'd': 3.8,  'Vd': 24.42, 'q': 0.0,   'alpha': 2.448},
     'CO2': {'sigma': 3.941, 'epsilon': 195.2,  'omega':  0.253, 'Tc': 304.1, 'Pc': 73.80, 'd': 3.3,  'Vd': 26.9,  'q': 0.70,  'alpha': 2.507},
-    'H2S': {'sigma': 3.623, 'epsilon': 301.1,  'omega':  0.100, 'Tc': 373.3, 'Pc': 89.63, 'd': 3.6,  'Vd': 32.9,  'q': 0.20,  'alpha': 3.631},
-    # H2S alpha from NIST CCCBDB (Olney et al. 1997): 3.631 A3
+    'H2S': {'sigma': 3.623, 'epsilon': 301.1,  'omega':  0.100, 'Tc': 373.3, 'Pc': 89.63, 'd': 3.6,  'Vd': 32.9,  'q': 0.42,  'alpha': 3.631},
 }
 
 # GAS FEATURE FUNCTIONS
@@ -121,7 +129,6 @@ def get_gas_features_kinetic(g):
     p = GAS_PROPERTIES[g]
     return np.array([p['d'], p['Vd']], dtype=np.float32)
 
-# CHANGED: q_pos, q_neg  ->  |q|, alpha
 def get_gas_features_electrostatics(g):
     p = GAS_PROPERTIES[g]
     return np.array([p['q'], p['alpha']], dtype=np.float32)
@@ -131,7 +138,6 @@ def get_gas_features_thermo_and_kinetic(g):
     return np.array([p['sigma'], p['epsilon'], p['omega'],
                      p['Tc'], p['Pc'], p['d'], p['Vd']], dtype=np.float32)
 
-# CHANGED: q_pos, q_neg  ->  |q|, alpha  (feature_dim unchanged: 9)
 def get_gas_features_full(g):
     p = GAS_PROPERTIES[g]
     return np.array([p['sigma'], p['epsilon'], p['omega'],
@@ -139,6 +145,10 @@ def get_gas_features_full(g):
                      p['q'], p['alpha']], dtype=np.float32)
 
 def get_gas_features_onehot(g):
+    # NOTE: OneHot is defined over the 6 training gases only.
+    # H2S will get an all-zero vector at inference (unseen gas).
+    # If you want H2S to be inferable with OneHot, switch to a
+    # physical descriptor experiment (Thermodynamic, Full, etc.).
     idx = {'He': 0, 'H2': 1, 'N2': 2, 'O2': 3, 'CH4': 4, 'CO2': 5}
     v = np.zeros(6, dtype=np.float32)
     if g in idx:
@@ -148,15 +158,15 @@ def get_gas_features_onehot(g):
 EXPERIMENT_CONFIGS = {
     'Thermodynamic':      {'feature_func': get_gas_features_thermodynamic,     'feature_dim': 5, 'description': 'sigma, epsilon, omega, Tc, Pc'},
     'Kinetic':            {'feature_func': get_gas_features_kinetic,           'feature_dim': 2, 'description': 'd, Vd'},
-    'Electrostatics':     {'feature_func': get_gas_features_electrostatics,    'feature_dim': 2, 'description': '|q|, alpha'},        # CHANGED label
+    'Electrostatics':     {'feature_func': get_gas_features_electrostatics,    'feature_dim': 2, 'description': '|q|, alpha'},
     'Thermo_and_Kinetic': {'feature_func': get_gas_features_thermo_and_kinetic,'feature_dim': 7, 'description': 'sigma, epsilon, omega, Tc, Pc, d, Vd'},
-    'Full':               {'feature_func': get_gas_features_full,              'feature_dim': 9, 'description': 'sigma, epsilon, omega, Tc, Pc, d, Vd, |q|, alpha'},  # CHANGED label
+    'Full':               {'feature_func': get_gas_features_full,              'feature_dim': 9, 'description': 'sigma, epsilon, omega, Tc, Pc, d, Vd, |q|, alpha'},
     'OneHot':             {'feature_func': get_gas_features_onehot,            'feature_dim': 6, 'description': 'Categorical (1-of-6)'},
 }
 
 # DATA LOADING
 print("\nLoading data...")
-pol_sd = pd.read_csv('../data/Gas_permeability_solubility_diffusivity_wide.csv')
+pol_sd = pd.read_csv('../../data/Gas_permeability_solubility_diffusivity_wide.csv')
 
 smiles    = pol_sd['smiles_string']
 p_exp_map = {
@@ -178,7 +188,7 @@ def create_dataset(experiment_name, gas_subset=None):
             if not np.isnan(perm):
                 records.append({
                     'smiles': smi, 'gas': gas,
-                    'permeability': perm,
+                    'permeability': perm + 10.0,
                     'gas_features': feat_fn(gas),
                 })
     return records
@@ -228,56 +238,77 @@ def build_pyg_dataset(records):
         if g is None:
             continue
         g.gas_features = torch.tensor(
-            rec['gas_features'], dtype=torch.float).unsqueeze(0)
+            rec['gas_features'], dtype=torch.float).unsqueeze(0)  # [1, gas_dim]
         g.y        = torch.tensor([rec['permeability']], dtype=torch.float)
         g.gas_name = rec['gas']
         dataset.append(g)
     return dataset
 
 # FEATURE + TARGET STANDARDISATION
-def standardize_features(train_graphs, val_graphs):
-    node_sc = StandardScaler()
-    edge_sc = StandardScaler()
-    gas_sc  = StandardScaler()
-    node_sc.fit(np.vstack([g.x.numpy() for g in train_graphs]))
-    gas_sc.fit(np.array([g.gas_features.squeeze(0).numpy() for g in train_graphs]))
-    edge_data = [g.edge_attr.numpy() for g in train_graphs if g.edge_attr.shape[0] > 0]
-    if edge_data:
-        edge_sc.fit(np.vstack(edge_data))
+# Returns scalers so they can be saved with the model checkpoint
+def standardize_features(train_graphs, val_graphs,
+                          node_sc=None, edge_sc=None, gas_sc=None,
+                          fit=True):
+    """
+    If fit=True  : fit scalers on train_graphs, transform both sets.
+    If fit=False : use provided scalers to transform only (inference mode).
+    """
+    if fit:
+        node_sc = StandardScaler()
+        edge_sc = StandardScaler()
+        gas_sc  = StandardScaler()
+        node_sc.fit(np.vstack([g.x.numpy() for g in train_graphs]))
+        gas_sc.fit(np.array([g.gas_features.squeeze(0).numpy()
+                              for g in train_graphs]))
+        edge_data = [g.edge_attr.numpy()
+                     for g in train_graphs if g.edge_attr.shape[0] > 0]
+        if edge_data:
+            edge_sc.fit(np.vstack(edge_data))
 
     def scale(graphs):
         out = []
         for g in graphs:
             gc = g.clone()
-            gc.x = torch.tensor(node_sc.transform(g.x.numpy()), dtype=torch.float)
+            gc.x = torch.tensor(node_sc.transform(g.x.numpy()),
+                                 dtype=torch.float)
             gc.gas_features = torch.tensor(
-                gas_sc.transform(g.gas_features.squeeze(0).numpy().reshape(1, -1)),
+                gas_sc.transform(
+                    g.gas_features.squeeze(0).numpy().reshape(1, -1)),
                 dtype=torch.float)
-            if g.edge_attr.shape[0] > 0 and edge_data:
+            if g.edge_attr.shape[0] > 0:
                 gc.edge_attr = torch.tensor(
                     edge_sc.transform(g.edge_attr.numpy()), dtype=torch.float)
             out.append(gc)
         return out
 
-    return scale(train_graphs), scale(val_graphs), node_sc, edge_sc, gas_sc
+    scaled_train = scale(train_graphs)
+    scaled_val   = scale(val_graphs) if val_graphs else []
+    return scaled_train, scaled_val, node_sc, edge_sc, gas_sc
 
 
 def scale_targets(train_graphs, val_graphs):
     y_train = np.array([g.y.item() for g in train_graphs])
-    y_val   = np.array([g.y.item() for g in val_graphs])
     y_sc    = StandardScaler()
     y_tr_sc = y_sc.fit_transform(y_train.reshape(-1, 1)).flatten()
-    y_vl_sc = y_sc.transform(y_val.reshape(-1, 1)).flatten()
 
     def apply(graphs, y_vals):
-        out = []
-        for i, g in enumerate(graphs):
-            gc = g.clone()
-            gc.y = torch.tensor([y_vals[i]], dtype=torch.float)
-            out.append(gc)
-        return out
+        return [
+            (lambda gc: (setattr(gc, 'y',
+                                 torch.tensor([y_vals[i]], dtype=torch.float)),
+                          gc)[1])(g.clone())
+            for i, g in enumerate(graphs)
+        ]
 
-    return apply(train_graphs, y_tr_sc), apply(val_graphs, y_vl_sc), y_sc
+    train_out = apply(train_graphs, y_tr_sc)
+
+    if val_graphs:
+        y_val   = np.array([g.y.item() for g in val_graphs])
+        y_vl_sc = y_sc.transform(y_val.reshape(-1, 1)).flatten()
+        val_out = apply(val_graphs, y_vl_sc)
+    else:
+        val_out = []
+
+    return train_out, val_out, y_sc
 
 # MODEL
 class MPNNLayer(MessagePassing):
@@ -389,7 +420,7 @@ def evaluate(model, loader):
 
 def run_training_fold(train_raw, val_raw, feature_dim, hp,
                       max_epochs, patience):
-    """Scale, train, return best val MSE (scaled). Used in Stage 1 rotation."""
+    """Scale, train, return best val MSE (in scaled space). Used in Stage 1."""
     train_y, val_y, _ = scale_targets(train_raw, val_raw)
     train_sc, val_sc, _, _, _ = standardize_features(train_y, val_y)
 
@@ -412,7 +443,6 @@ def run_training_fold(train_raw, val_raw, feature_dim, hp,
     scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=max_epochs)
 
     best_val_mse = float('inf')
-    best_state   = None
     no_improve   = 0
 
     for epoch in range(max_epochs):
@@ -421,7 +451,6 @@ def run_training_fold(train_raw, val_raw, feature_dim, hp,
         val_mse = float(np.mean((vp - vt) ** 2))
         if val_mse < best_val_mse:
             best_val_mse = val_mse
-            best_state   = {k: v.cpu().clone() for k, v in model.state_dict().items()}
             no_improve   = 0
         else:
             no_improve  += 1
@@ -430,34 +459,35 @@ def run_training_fold(train_raw, val_raw, feature_dim, hp,
 
     return best_val_mse
 
-# STAGE 1 - OPTUNA OBJECTIVE
+# STAGE 1 - OPTUNA OBJECTIVE  (all 6 gases, LOGO rotation)
 def make_hpo_objective(graphs_by_gas, feature_dim):
     """
     For each trial:
-      For each gas V in TRAINING_POOL:
-        val  = graphs for V
-        train = graphs for all other pool gases
+      For each gas V in ALL_GASES:
+        val  = graphs for gas V
+        train = graphs for the other 5 gases
         Compute inner val MSE
-      Return mean val MSE  (TEST_GAS is NEVER used here)
+      Return mean val MSE over all 6 rotations.
+    No gas is locked away - this is pure cross-gas CV for HPO.
     """
     def objective(trial: optuna.Trial) -> float:
         hp = {
-            'learning_rate': trial.suggest_float('learning_rate', 1e-5, 1e-2, log=True),
-            'l2_lambda':     trial.suggest_float('l2_lambda',     1e-4, 1e-2, log=True),
+            'learning_rate': trial.suggest_float('learning_rate', 1e-6, 1e-1, log=True),
+            'l2_lambda':     trial.suggest_float('l2_lambda',     1e-5, 1e-1, log=True),
             'hidden_dim':    trial.suggest_categorical('hidden_dim',    [32, 64, 128, 256, 512]),
             'num_mp_layers': trial.suggest_categorical('num_mp_layers', [2, 3, 4, 5, 6, 7]),
             'fusion_dim':    trial.suggest_categorical('fusion_dim',    [16, 32, 64, 128, 256, 512]),
-            'dropout':       trial.suggest_float('dropout',       0.01, 0.5),
+            'dropout':       trial.suggest_float('dropout',       0.001, 0.75),
             'pooling':       trial.suggest_categorical('pooling', ['mean', 'attention', 'sum']),
-            'batch_size':    trial.suggest_categorical('batch_size', [8, 16, 32, 64, 128]),
+            'batch_size':    trial.suggest_categorical('batch_size', [4, 8, 16, 32, 64, 128, 256]),
         }
 
         rotation_mses = []
 
-        for step, val_gas in enumerate(TRAINING_POOL):
+        for step, val_gas in enumerate(ALL_GASES):
             val_raw   = graphs_by_gas.get(val_gas, [])
             train_raw = []
-            for g_name in TRAINING_POOL:
+            for g_name in ALL_GASES:
                 if g_name != val_gas:
                     train_raw.extend(graphs_by_gas.get(g_name, []))
 
@@ -482,19 +512,31 @@ def make_hpo_objective(graphs_by_gas, feature_dim):
 
     return objective
 
-# STAGE 2 - FINAL EVALUATION ON TEST GAS
-def final_evaluation(pool_graphs, test_graphs, feature_dim, hp, experiment_name):
-    """Train on full pool, evaluate on locked-away TEST_GAS. Save CSV."""
-    train_y, test_y, y_sc = scale_targets(pool_graphs, test_graphs)
-    train_sc, test_sc, _, _, _ = standardize_features(train_y, test_y)
+# STAGE 2 - FINAL TRAINING ON ALL 6 GASES + SAVE MODEL
+def train_and_save(all_graphs, feature_dim, hp, experiment_name):
+    """
+    Train on all 6 gases with best hyperparameters.
+    Save:
+      - state_dict only : gc_mpnn_pretrained.pt
+      - full checkpoint : gc_mpnn_pretrained_checkpoint.pt
+        Contains model weights + all scalers + config needed for H2S inference.
+    """
+    print(f"\n  Training on all {len(all_graphs)} graphs "
+          f"({len(ALL_GASES)} gases) with best hyperparameters...")
 
-    train_loader = DataLoader(train_sc, batch_size=hp['batch_size'],
-                              shuffle=True,  num_workers=NUM_WORKERS,
-                              pin_memory=PIN_MEMORY)
-    test_loader  = DataLoader(test_sc,  batch_size=hp['batch_size'],
-                              shuffle=False, num_workers=NUM_WORKERS,
-                              pin_memory=PIN_MEMORY)
+    # Scale targets
+    # No separate val set - use the whole dataset for training
+    train_sc_y, _, y_sc = scale_targets(all_graphs, [])
 
+    # Scale features
+    train_sc, _, node_sc, edge_sc, gas_sc = standardize_features(
+        train_sc_y, [], fit=True)
+
+    train_loader = DataLoader(
+        train_sc, batch_size=hp['batch_size'],
+        shuffle=True, num_workers=NUM_WORKERS, pin_memory=PIN_MEMORY)
+
+    # Build model
     model = GasConditionedMPNN(
         node_features=7, edge_features=7, gas_features=feature_dim,
         hidden_dim=hp['hidden_dim'], num_mp_layers=hp['num_mp_layers'],
@@ -504,222 +546,233 @@ def final_evaluation(pool_graphs, test_graphs, feature_dim, hp, experiment_name)
 
     criterion = nn.MSELoss()
     optimizer = optim.Adam(model.parameters(), lr=hp['learning_rate'])
-    scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=FINAL_EPOCHS)
+    scheduler = optim.lr_scheduler.CosineAnnealingLR(
+        optimizer, T_max=FINAL_EPOCHS)
 
-    best_tr_loss = float('inf')
-    best_state   = None
-    no_improve   = 0
-
-    print(f"    Training on pool ({len(pool_graphs)} samples) "
-          f"-> evaluating on {TEST_GAS} ({len(test_graphs)} samples)...")
+    best_loss  = float('inf')
+    best_state = None
+    no_improve = 0
 
     for epoch in range(FINAL_EPOCHS):
-        tr_loss = train_epoch(model, train_loader, criterion, optimizer, scheduler)
-        if tr_loss < best_tr_loss:
-            best_tr_loss = tr_loss
-            best_state   = {k: v.cpu().clone() for k, v in model.state_dict().items()}
-            no_improve   = 0
+        tr_loss = train_epoch(model, train_loader, criterion,
+                              optimizer, scheduler)
+        if tr_loss < best_loss:
+            best_loss  = tr_loss
+            best_state = {k: v.cpu().clone()
+                          for k, v in model.state_dict().items()}
+            no_improve = 0
         else:
-            no_improve  += 1
+            no_improve += 1
         if (epoch + 1) % 100 == 0:
-            print(f"      Epoch {epoch+1}  train_loss={tr_loss:.4f}")
+            print(f"    Epoch {epoch+1:>4}  train_loss={tr_loss:.4f}  "
+                  f"best={best_loss:.4f}")
         if no_improve >= FINAL_PATIENCE:
-            print(f"      Early stop at epoch {epoch+1}")
+            print(f"    Early stop at epoch {epoch+1}")
             break
 
     model.load_state_dict({k: v.to(device) for k, v in best_state.items()})
 
-    # Predictions in original log10-Barrer scale
-    tp, tt = evaluate(model, test_loader)
-    y_pred = y_sc.inverse_transform(tp.reshape(-1, 1)).flatten()
-    y_true = y_sc.inverse_transform(tt.reshape(-1, 1)).flatten()
+    # Quick train-set metrics
+    tp, tt = evaluate(model, train_loader)
+    y_pred_tr = y_sc.inverse_transform(tp.reshape(-1, 1)).flatten()
+    y_true_tr = y_sc.inverse_transform(tt.reshape(-1, 1)).flatten()
+    ss_res = np.sum((y_true_tr - y_pred_tr) ** 2)
+    ss_tot = np.sum((y_true_tr - np.mean(y_true_tr)) ** 2)
+    train_r2   = float(1 - ss_res / ss_tot)
+    train_rmse = float(np.sqrt(np.mean((y_pred_tr - y_true_tr) ** 2)))
+    print(f"\n  Final train metrics (all 6 gases):")
+    print(f"    R2   = {train_r2:.4f}")
+    print(f"    RMSE = {train_rmse:.4f}  (log10-Barrer)")
 
-    trp, trt = evaluate(model, train_loader)
-    y_pred_tr = y_sc.inverse_transform(trp.reshape(-1, 1)).flatten()
-    y_true_tr = y_sc.inverse_transform(trt.reshape(-1, 1)).flatten()
+    # Save state_dict only
+    weights_path = 'gc_mpnn_pretrained.pt'
+    torch.save(best_state, weights_path)
+    print(f"\n  Saved weights : {weights_path}")
 
-    def metrics(yt, yp):
-        ss_res = np.sum((yt - yp) ** 2)
-        ss_tot = np.sum((yt - np.mean(yt)) ** 2)
-        return {
-            'r2':   float(1 - ss_res / ss_tot) if ss_tot > 0 else 0.0,
-            'rmse': float(np.sqrt(np.mean((yp - yt) ** 2))),
-            'mae':  float(np.mean(np.abs(yp - yt))),
-        }
+    # Save full inference checkpoint
+    # Everything needed to run inference on a new gas (e.g. H2S)
+    # without re-importing any training code.
+    checkpoint = {
+        # Model weights
+        'model_state_dict': best_state,
 
-    test_met  = metrics(y_true, y_pred)
-    train_met = metrics(y_true_tr, y_pred_tr)
+        # Architecture config (re-instantiate the model)
+        'model_config': {
+            'node_features':  7,
+            'edge_features':  7,
+            'gas_features':   feature_dim,
+            'hidden_dim':     hp['hidden_dim'],
+            'num_mp_layers':  hp['num_mp_layers'],
+            'fusion_dim':     hp['fusion_dim'],
+            'l2_lambda':      hp['l2_lambda'],
+            'dropout':        hp['dropout'],
+            'pooling':        hp['pooling'],
+        },
 
-    print(f"    Test  {TEST_GAS}: R2={test_met['r2']:.4f}  "
-          f"RMSE={test_met['rmse']:.4f}  MAE={test_met['mae']:.4f}")
-    print(f"    Train pool:   R2={train_met['r2']:.4f}  "
-          f"RMSE={train_met['rmse']:.4f}")
+        # Sklearn scalers (needed for preprocessing)
+        'node_scaler':    node_sc,   # StandardScaler for node features
+        'edge_scaler':    edge_sc,   # StandardScaler for edge features
+        'gas_scaler':     gas_sc,    # StandardScaler for gas features
+        'target_scaler':  y_sc,      # StandardScaler for log10-Barrer targets
 
-    # Save CSVs
-    csv_test = f"{experiment_name}_test_{TEST_GAS}_predictions.csv"
-    pd.DataFrame({
-        'y_true': y_true, 'y_pred': y_pred,
-        'residual': y_pred - y_true,
-        'gas': TEST_GAS, 'split': 'test', 'experiment': experiment_name,
-    }).to_csv(csv_test, index=False)
-    print(f"    Saved: {csv_test}")
+        # Experiment metadata
+        'experiment_name': experiment_name,
+        'gas_feature_dim': feature_dim,
+        'gas_feature_desc': EXPERIMENT_CONFIGS[experiment_name]['description'],
+        'trained_on_gases': ALL_GASES,
 
-    csv_train = f"{experiment_name}_train_pool_predictions.csv"
-    pd.DataFrame({
-        'y_true': y_true_tr, 'y_pred': y_pred_tr,
-        'residual': y_pred_tr - y_true_tr,
-        'split': 'train', 'experiment': experiment_name,
-    }).to_csv(csv_train, index=False)
-    print(f"    Saved: {csv_train}")
+        # H2S inference note
+        # For physical descriptor experiments (Thermodynamic, Full, etc.):
+        # gas_feat = get_gas_features_<exp>(H2S)  ->  gas_scaler.transform(...)
+        # For OneHot:
+        # H2S has no training index; it will receive a zero vector.
+        # Physical descriptors are strongly recommended for H2S.
+        'h2s_inference_note': (
+            "Use GAS_PROPERTIES['H2S'] with the same feature function as "
+            f"'{experiment_name}' to build the H2S gas feature vector. "
+            "Apply gas_scaler.transform() before passing to the model. "
+            "For Kinetic: H2S uses d=3.6 A, Vd=32.9 cm3/mol - both are "
+            "within/near the training gas range so extrapolation risk is low. "
+            "For Full/Thermodynamic: all 9 H2S properties are in GAS_PROPERTIES. "
+            "OneHot encodes H2S as all-zeros (unseen class) - avoid for H2S inference."
+        ),
 
-    return y_true, y_pred, test_met, train_met
+        # Training metrics
+        'train_r2':   train_r2,
+        'train_rmse': train_rmse,
+        'best_hpo_mse': None,  # filled in by caller
+    }
+
+    ckpt_path = 'gc_mpnn_pretrained_checkpoint.pt'
+    torch.save(checkpoint, ckpt_path)
+    print(f"  Saved checkpoint: {ckpt_path}")
+    print(f"    (contains weights + node/edge/gas/target scalers + config)")
+
+    return checkpoint, train_r2, train_rmse
 
 # MAIN
-#exp_list = ['Thermodynamic', 'Kinetic', 'Electrostatics',
-# 'Thermo_and_Kinetic', 'Full', 'OneHot']
-exp_list = ['Full']
+config      = EXPERIMENT_CONFIGS[EXPERIMENT_NAME]
+feature_dim = config['feature_dim']
 
 print("\n" + "="*80)
-print("GC-MPNN  -  NESTED HPO  +  LOGO FINAL EVALUATION")
-print(f"Test gas (locked away) : {TEST_GAS}")
-print(f"Training pool          : {TRAINING_POOL}")
+print("GC-MPNN  -  HPO on ALL 6 GASES  +  PRETRAINED MODEL SAVE")
+print(f"Experiment  : {EXPERIMENT_NAME}  ({config['description']})")
+print(f"All gases   : {ALL_GASES}")
 print(f"Optuna trials          : {N_OPTUNA_TRIALS}")
 print(f"HPO epochs / patience  : {HPO_EPOCHS} / {HPO_PATIENCE}")
 print(f"Final epochs / patience: {FINAL_EPOCHS} / {FINAL_PATIENCE}")
 print("="*80)
 
-all_results  = {}
-summary_rows = []
+# Build full dataset (all 6 gases)
+print("\nBuilding datasets...")
+all_graphs = build_pyg_dataset(create_dataset(EXPERIMENT_NAME, ALL_GASES))
+print(f"Total graphs (all 6 gases): {len(all_graphs)}")
 
-for experiment_name in exp_list:
-    print(f"\n{'='*80}")
-    print(f"EXPERIMENT: {experiment_name}")
-    print("="*80)
+graphs_by_gas = {}
+for g in all_graphs:
+    graphs_by_gas.setdefault(g.gas_name, []).append(g)
+print("Per-gas counts: " +
+      "  ".join(f"{g}={len(graphs_by_gas.get(g, []))}" for g in ALL_GASES))
 
-    config      = EXPERIMENT_CONFIGS[experiment_name]
-    feature_dim = config['feature_dim']
-    print(f"Gas features: {config['description']} ({feature_dim}D)")
+# STAGE 1: Optuna HPO
+print(f"\n{''*60}")
+print(f"Stage 1 - Optuna HPO  ({N_OPTUNA_TRIALS} trials)")
+print(f"Objective : mean inner val MSE across all 6 LOGO rotations")
+print(f"{''*60}")
 
-    # Build datasets
-    print("Building datasets...")
-    pool_graphs = build_pyg_dataset(create_dataset(experiment_name, TRAINING_POOL))
-    test_graphs = build_pyg_dataset(create_dataset(experiment_name, [TEST_GAS]))
-    print(f"  Pool ({'+'.join(TRAINING_POOL)}): {len(pool_graphs)} graphs")
-    print(f"  Test ({TEST_GAS})            : {len(test_graphs)} graphs")
+study = optuna.create_study(
+    direction  = 'minimize',
+    sampler    = TPESampler(seed=42),
+    pruner     = MedianPruner(n_startup_trials=5, n_warmup_steps=2,
+                              interval_steps=1),
+    study_name = f"all6_hpo_{EXPERIMENT_NAME}",
+)
 
-    graphs_by_gas = {}
-    for g in pool_graphs:
-        graphs_by_gas.setdefault(g.gas_name, []).append(g)
-    print("  Pool per gas: " +
-          "  ".join(f"{g}={len(graphs_by_gas.get(g,[]))}" for g in TRAINING_POOL))
+study.optimize(
+    make_hpo_objective(graphs_by_gas, feature_dim),
+    n_trials          = N_OPTUNA_TRIALS,
+    show_progress_bar = True,
+    gc_after_trial    = True,
+)
 
-    # STAGE 1: Optuna HPO
-    print(f"\n{''*60}")
-    print(f"Stage 1 - Optuna HPO  ({N_OPTUNA_TRIALS} trials)")
-    print(f"Objective : mean inner val MSE across {len(TRAINING_POOL)} rotations")
-    print(f"'{TEST_GAS}' IS LOCKED AWAY - not used in Stage 1")
-    print(f"{''*60}")
+best_params = study.best_params
+best_mse    = study.best_value
+n_complete  = sum(1 for t in study.trials
+                  if t.state == optuna.trial.TrialState.COMPLETE)
+n_pruned    = sum(1 for t in study.trials
+                  if t.state == optuna.trial.TrialState.PRUNED)
 
-    study = optuna.create_study(
-        direction  = 'minimize',
-        sampler    = TPESampler(seed=42),
-        pruner     = MedianPruner(n_startup_trials=5, n_warmup_steps=2,
-                                  interval_steps=1),
-        study_name = f"{experiment_name}_nested_hpo",
-    )
+print(f"\nTrials - complete: {n_complete}  pruned: {n_pruned}")
+print(f"Best mean inner val MSE (scaled): {best_mse:.6f}")
+print("Best hyperparameters:")
+for k, v in best_params.items():
+    print(f"  {k:<20} : {v}")
 
-    study.optimize(
-        make_hpo_objective(graphs_by_gas, feature_dim),
-        n_trials          = N_OPTUNA_TRIALS,
-        show_progress_bar = True,
-        gc_after_trial    = True,
-    )
+print("\nPer-rotation val MSE for best trial:")
+for step, gas in enumerate(ALL_GASES):
+    val = study.best_trial.intermediate_values.get(step, float('nan'))
+    print(f"  val_gas={gas:<4}  MSE={val:.4f}")
 
-    best_params = study.best_params
-    best_mse    = study.best_value
-    n_complete  = sum(1 for t in study.trials
-                      if t.state == optuna.trial.TrialState.COMPLETE)
-    n_pruned    = sum(1 for t in study.trials
-                      if t.state == optuna.trial.TrialState.PRUNED)
+study.trials_dataframe().to_csv('all6_optuna_trials.csv', index=False)
 
-    print(f"\nTrials - complete: {n_complete}  pruned: {n_pruned}")
-    print(f"Best mean inner val MSE (scaled): {best_mse:.6f}")
-    print("Best hyperparameters:")
-    for k, v in best_params.items():
-        print(f"  {k:<20} : {v}")
+best_params_clean = {
+    k: (float(v) if isinstance(v, (np.floating, float)) else v)
+    for k, v in best_params.items()
+}
+with open('all6_best_params.json', 'w') as f:
+    json.dump({'params': best_params_clean,
+               'best_hpo_mse': float(best_mse),
+               'experiment': EXPERIMENT_NAME}, f, indent=2)
 
-    print(f"\nPer-rotation val MSE for best trial:")
-    for step, gas in enumerate(TRAINING_POOL):
-        val = study.best_trial.intermediate_values.get(step, float('nan'))
-        print(f"  val_gas={gas:<4}  MSE={val:.4f}")
+print("Saved: all6_optuna_trials.csv")
+print("Saved: all6_best_params.json")
 
-    study.trials_dataframe().to_csv(
-        f"{experiment_name}_optuna_trials.csv", index=False)
+print("\nHyperparameter Importances (FAnova):")
+try:
+    for param, imp in optuna.importance.get_param_importances(study).items():
+        print(f"  {param:<20} : {imp:.4f}")
+except Exception:
+    print("  (requires >= 4 completed non-pruned trials)")
 
-    best_params_clean = {
-        k: (float(v) if isinstance(v, (np.floating, float)) else v)
-        for k, v in best_params.items()
-    }
-    with open(f"{experiment_name}_best_params.json", 'w') as f:
-        json.dump({'params': best_params_clean, 'best_hpo_mse': float(best_mse)}, f, indent=2)
+# STAGE 2: Final training + save
+print(f"\n{''*60}")
+print(f"Stage 2 - Final Training on ALL 6 gases  +  Model Save")
+print(f"{''*60}")
 
-    print(f"Saved: {experiment_name}_optuna_trials.csv")
-    print(f"Saved: {experiment_name}_best_params.json")
+checkpoint, train_r2, train_rmse = train_and_save(
+    all_graphs, feature_dim, best_params, EXPERIMENT_NAME)
 
-    print("\nHyperparameter Importances (FAnova):")
-    try:
-        for param, imp in optuna.importance.get_param_importances(study).items():
-            print(f"  {param:<20} : {imp:.4f}")
-    except Exception:
-        print("  (requires >= 4 completed non-pruned trials)")
-
-    # STAGE 2: Final evaluation
-    print(f"\n{''*60}")
-    print(f"Stage 2 - Final Evaluation on {TEST_GAS}  (test gas unlocked)")
-    print(f"{''*60}")
-
-    y_true, y_pred, test_met, train_met = final_evaluation(
-        pool_graphs, test_graphs, feature_dim, best_params, experiment_name)
-
-    all_results[experiment_name] = {
-        'test_metrics':  test_met,
-        'train_metrics': train_met,
-        'best_params':   best_params,
-        'best_hpo_mse':  best_mse,
-    }
-
-    summary_rows.append({
-        'experiment':   experiment_name,
-        'feature_dim':  feature_dim,
-        'test_gas':     TEST_GAS,
-        'test_R2':      test_met['r2'],
-        'test_RMSE':    test_met['rmse'],
-        'test_MAE':     test_met['mae'],
-        'train_R2':     train_met['r2'],
-        'best_hpo_mse': best_mse,
-        'n_complete':   n_complete,
-        'n_pruned':     n_pruned,
-        **{f"hp_{k}": v for k, v in best_params.items()},
-    })
+# Backfill best_hpo_mse into saved checkpoint
+checkpoint['best_hpo_mse'] = float(best_mse)
+torch.save(checkpoint, 'gc_mpnn_pretrained_checkpoint.pt')
 
 # SUMMARY
 print("\n" + "="*80)
-print(f"FINAL SUMMARY  -  Test gas: {TEST_GAS}")
+print("COMPLETE - Pretrained GC-MPNN saved")
 print("="*80)
-
-summary_df = pd.DataFrame(summary_rows)
-print(summary_df[['experiment', 'feature_dim',
-                   'test_R2', 'test_RMSE', 'test_MAE',
-                   'train_R2', 'best_hpo_mse']].to_string(index=False))
-
-print(f"\nRanking by Test R2 on {TEST_GAS}:")
-for _, row in summary_df.sort_values('test_R2', ascending=False).iterrows():
-    print(f"  {row['experiment']:<25} R2={row['test_R2']:.4f}")
-
-summary_df.to_csv('all_experiments_summary.csv', index=False)
-torch.save(all_results, 'optuna_logo_results.pt')
-print("\nSaved: all_experiments_summary.csv")
-print("Saved: optuna_logo_results.pt")
-print("\n" + "="*80)
-print("COMPLETE")
+print(f"  Experiment        : {EXPERIMENT_NAME}  ({config['description']})")
+print(f"  Trained on        : {ALL_GASES}  ({len(all_graphs)} graphs)")
+print(f"  Final train R2    : {train_r2:.4f}")
+print(f"  Final train RMSE  : {train_rmse:.4f}  (log10-Barrer)")
+print(f"  Best HPO MSE      : {best_mse:.6f}  (scaled, avg over 6 LOGO folds)")
+print()
+print("  Saved files:")
+print("    gc_mpnn_pretrained.pt             - state_dict only")
+print("    gc_mpnn_pretrained_checkpoint.pt  - full inference checkpoint")
+print("    all6_optuna_trials.csv            - Optuna trial history")
+print("    all6_best_params.json             - best hyperparameters")
+print()
+print("  To predict H2S permeability, load 'gc_mpnn_pretrained_checkpoint.pt'")
+print("  and use GAS_PROPERTIES['H2S'] with the gas feature function for")
+print(f"  '{EXPERIMENT_NAME}' to build the gas feature vector.")
+if EXPERIMENT_NAME == 'OneHot':
+    print()
+    print("    WARNING: OneHot encodes H2S as all-zeros (unseen class).")
+    print("     Consider re-running with EXPERIMENT_NAME = 'Full' or")
+    print("     'Thermodynamic' for physically meaningful H2S predictions.")
+elif EXPERIMENT_NAME == 'Kinetic':
+    print()
+    print("    Kinetic descriptors (d, Vd): H2S is encodable at inference.")
+    print("     Supply d=3.6, Vd=32.9 for H2S - both are within/near the")
+    print("     training gas range; the gas_scaler handles normalisation.")
 print("="*80)

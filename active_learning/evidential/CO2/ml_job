@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Purge modules
+module purge
+
+# Load CUDA
+module load cuda/12.2
+
+# Initialize conda from HOME (where miniconda is installed)
+#source ~/miniconda3/etc/profile.d/conda.sh
+
+# Activate environment from WORK (where env is stored)
+conda activate poly_net
+
+# Verify setup
+echo "Python location: $(which python)"
+echo "Python version: $(python --version)"
+nvidia-smi
+
+# Run script
+python gnn_evidential_calibrated.py
+

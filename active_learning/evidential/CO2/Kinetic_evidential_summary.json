@@ -1,0 +1,47 @@
+{
+  "experiment": "Kinetic",
+  "test_gas": "CO2",
+  "lambda_reg_star": 0.3907171875,
+  "lambda_search": {
+    "low": 0.0001,
+    "high": 5.0,
+    "target_picp": 0.95,
+    "tol": 0.01
+  },
+  "hyperparameters": {
+    "learning_rate": 2.214904218133083e-05,
+    "l2_lambda": 0.00524222708006489,
+    "hidden_dim": 512,
+    "num_mp_layers": 5,
+    "fusion_dim": 32,
+    "dropout": 0.04975910889419488,
+    "pooling": "attention",
+    "batch_size": 8
+  },
+  "test_metrics": {
+    "r2": 0.40324145555496216,
+    "rmse": 0.9063952565193176,
+    "mae": 0.8620437979698181
+  },
+  "pool_metrics": {
+    "r2": 0.9924606084823608,
+    "rmse": 0.11834728717803955,
+    "mae": 0.0543135330080986
+  },
+  "test_calibration": {
+    "picp_95": 0.07919254658385093,
+    "mpiw_95": 0.5153152346611023,
+    "nmpiw_95": 0.06947922424084696
+  },
+  "pool_calibration": {
+    "picp_95": 0.9886120996441281,
+    "mpiw_95": 0.49367353320121765,
+    "nmpiw_95": 0.059039649908507255
+  },
+  "uncertainty_summary": {
+    "mean_aleatoric_std": 0.02826296165585518,
+    "mean_epistemic_std": 0.12805256247520447,
+    "mean_total_std": 0.13145796954631805
+  },
+  "bisection_iters": 6
+}

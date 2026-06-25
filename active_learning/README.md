@@ -1,1 +1,26 @@
+# Active learning
 
+These experiments ask a simple question: if we are allowed to add just a few
+real measurements of the held-out gas (CO2) to the training data, which ones
+should we pick to improve the model the most?
+
+The idea: train a model that also gives an *uncertainty* for each prediction,
+then add the polymers the model is least sure about, retrain, and see how much
+better it gets compared to just picking random polymers.
+
+## Two variants (each in its own folder)
+
+- `ensemble_and_random/CO2/` — uncertainty comes from a **deep ensemble**
+  (train many models, look at how much they disagree).
+- `evidential/CO2/` — uncertainty comes from a single **evidential** model
+  (the model predicts its own uncertainty directly).
+
+Each folder has its own README with the exact steps. In both cases the order
+is the same: **first** train the uncertainty model, **then** run the active
+learning script.
+
+All scripts read the training set from
+`../../../data/Gas_permeability_solubility_diffusivity_wide.csv`.
+
+The `bash_al` / `ml_job` files you may see are cluster job scripts (for SLURM).
+You can ignore them if you are running locally.

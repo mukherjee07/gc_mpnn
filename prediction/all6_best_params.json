@@ -1,0 +1,14 @@
+{
+  "params": {
+    "learning_rate": 0.00013440096866735207,
+    "l2_lambda": 0.00011373347725920372,
+    "hidden_dim": 128,
+    "num_mp_layers": 3,
+    "fusion_dim": 16,
+    "dropout": 0.006144344582357443,
+    "pooling": "mean",
+    "batch_size": 16
+  },
+  "best_hpo_mse": 0.04901808084217755,
+  "experiment": "Kinetic"
+}

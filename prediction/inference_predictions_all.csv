@@ -1,0 +1,694 @@
+polymer_type,polymer_name,smiles_1,smiles_2,is_copolymer,mf_1,mf_2,gas,is_ood,y_true_log10,y_pred_log10,residual,y_pred_1_log10,y_pred_2_log10
+Cellulosic Polymers,Cellulosic Polymers,[*]OC[C@H]1O[C@@H](OCC)[C@H](O)[C@@H](OCC)[C@H]1O[*],,No,,,He,No,,1.7528,,1.7528,
+Cellulosic Polymers,Cellulosic Polymers,[*]OC[C@H]1O[C@@H](OCC)[C@H](O)[C@@H](OCC)[C@H]1O[*],,No,,,H2,No,,1.7913,,1.7913,
+Cellulosic Polymers,Cellulosic Polymers,[*]OC[C@H]1O[C@@H](OCC)[C@H](O)[C@@H](OCC)[C@H]1O[*],,No,,,N2,No,,0.6307,,0.6307,
+Cellulosic Polymers,Cellulosic Polymers,[*]OC[C@H]1O[C@@H](OCC)[C@H](O)[C@@H](OCC)[C@H]1O[*],,No,,,O2,No,,1.1534,,1.1534,
+Cellulosic Polymers,Cellulosic Polymers,[*]OC[C@H]1O[C@@H](OCC)[C@H](O)[C@@H](OCC)[C@H]1O[*],,No,,,CH4,No,,0.9341,,0.9341,
+Cellulosic Polymers,Cellulosic Polymers,[*]OC[C@H]1O[C@@H](OCC)[C@H](O)[C@@H](OCC)[C@H]1O[*],,No,,,CO2,No,,1.9381,,1.9381,
+Cellulosic Polymers,Cellulosic Polymers,[*]OC[C@H]1O[C@@H](OCC)[C@H](O)[C@@H](OCC)[C@H]1O[*],,No,,,C2H4,Yes,,1.6094,,1.6094,
+Cellulosic Polymers,Cellulosic Polymers,[*]OC[C@H]1O[C@@H](OCC)[C@H](O)[C@@H](OCC)[C@H]1O[*],,No,,,C2H6,Yes,,1.2992,,1.2992,
+Cellulosic Polymers,Cellulosic Polymers,[*]OC[C@H]1O[C@@H](OCC)[C@H](O)[C@@H](OCC)[C@H]1O[*],,No,,,C3H6,Yes,1.716,1.531,-0.185,1.531,
+Cellulosic Polymers,Cellulosic Polymers,[*]OC[C@H]1O[C@@H](OCC)[C@H](O)[C@@H](OCC)[C@H]1O[*],,No,,,C3H8,Yes,1.2041,1.6298,0.4257,1.6298,
+Cellulosic Polymers,Cellulosic Polymers,[*]OC[C@H]1O[C@@H](OCC)[C@H](O)[C@@H](OCC)[C@H]1O[*],,No,,,n-C4H10,Yes,,1.71,,1.71,
+Cellulosic Polymers,Cellulosic Polymers,[*]OC[C@H]1O[C@@H](OC(C)=O)[C@H](O)[C@@H](OC(C)=O)[C@H]1O[*],,No,,,He,No,,1.1889,,1.1889,
+Cellulosic Polymers,Cellulosic Polymers,[*]OC[C@H]1O[C@@H](OC(C)=O)[C@H](O)[C@@H](OC(C)=O)[C@H]1O[*],,No,,,H2,No,,1.0641,,1.0641,
+Cellulosic Polymers,Cellulosic Polymers,[*]OC[C@H]1O[C@@H](OC(C)=O)[C@H](O)[C@@H](OC(C)=O)[C@H]1O[*],,No,,,N2,No,,-0.6938,,-0.6938,
+Cellulosic Polymers,Cellulosic Polymers,[*]OC[C@H]1O[C@@H](OC(C)=O)[C@H](O)[C@@H](OC(C)=O)[C@H]1O[*],,No,,,O2,No,,-0.0628,,-0.0628,
+Cellulosic Polymers,Cellulosic Polymers,[*]OC[C@H]1O[C@@H](OC(C)=O)[C@H](O)[C@@H](OC(C)=O)[C@H]1O[*],,No,,,CH4,No,,-0.9208,,-0.9208,
+Cellulosic Polymers,Cellulosic Polymers,[*]OC[C@H]1O[C@@H](OC(C)=O)[C@H](O)[C@@H](OC(C)=O)[C@H]1O[*],,No,,,CO2,No,,0.4892,,0.4892,
+Cellulosic Polymers,Cellulosic Polymers,[*]OC[C@H]1O[C@@H](OC(C)=O)[C@H](O)[C@@H](OC(C)=O)[C@H]1O[*],,No,,,C2H4,Yes,,-0.5463,,-0.5463,
+Cellulosic Polymers,Cellulosic Polymers,[*]OC[C@H]1O[C@@H](OC(C)=O)[C@H](O)[C@@H](OC(C)=O)[C@H]1O[*],,No,,,C2H6,Yes,,-0.7621,,-0.7621,
+Cellulosic Polymers,Cellulosic Polymers,[*]OC[C@H]1O[C@@H](OC(C)=O)[C@H](O)[C@@H](OC(C)=O)[C@H]1O[*],,No,,,C3H6,Yes,1.1818,-0.5705,-1.7524,-0.5705,
+Cellulosic Polymers,Cellulosic Polymers,[*]OC[C@H]1O[C@@H](OC(C)=O)[C@H](O)[C@@H](OC(C)=O)[C@H]1O[*],,No,,,C3H8,Yes,0.7634,-0.4927,-1.2561,-0.4927,
+Cellulosic Polymers,Cellulosic Polymers,[*]OC[C@H]1O[C@@H](OC(C)=O)[C@H](O)[C@@H](OC(C)=O)[C@H]1O[*],,No,,,n-C4H10,Yes,,-0.3966,,-0.3966,
+Perfluorinated Polymers,Perfluorinated Polymers,[*]C(F)(F)C(F)(F)[*],,No,,,He,No,,1.6855,,1.6855,
+Perfluorinated Polymers,Perfluorinated Polymers,[*]C(F)(F)C(F)(F)[*],,No,,,H2,No,,1.2392,,1.2392,
+Perfluorinated Polymers,Perfluorinated Polymers,[*]C(F)(F)C(F)(F)[*],,No,,,N2,No,,0.1914,,0.1914,
+Perfluorinated Polymers,Perfluorinated Polymers,[*]C(F)(F)C(F)(F)[*],,No,,,O2,No,,0.7023,,0.7023,
+Perfluorinated Polymers,Perfluorinated Polymers,[*]C(F)(F)C(F)(F)[*],,No,,,CH4,No,,0.0121,,0.0121,
+Perfluorinated Polymers,Perfluorinated Polymers,[*]C(F)(F)C(F)(F)[*],,No,,,CO2,No,,1.0954,,1.0954,
+Perfluorinated Polymers,Perfluorinated Polymers,[*]C(F)(F)C(F)(F)[*],,No,,,C2H4,Yes,0.415,0.3265,-0.0885,0.3265,
+Perfluorinated Polymers,Perfluorinated Polymers,[*]C(F)(F)C(F)(F)[*],,No,,,C2H6,Yes,0.2553,0.1451,-0.1102,0.1451,
+Perfluorinated Polymers,Perfluorinated Polymers,[*]C(F)(F)C(F)(F)[*],,No,,,C3H6,Yes,,0.2925,,0.2925,
+Perfluorinated Polymers,Perfluorinated Polymers,[*]C(F)(F)C(F)(F)[*],,No,,,C3H8,Yes,,0.3521,,0.3521,
+Perfluorinated Polymers,Perfluorinated Polymers,[*]C(F)(F)C(F)(F)[*],,No,,,n-C4H10,Yes,,0.4157,,0.4157,
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],,No,,,He,No,,1.6225,,1.6225,
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],,No,,,H2,No,,1.4517,,1.4517,
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],,No,,,N2,No,,0.1903,,0.1903,
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],,No,,,O2,No,,0.8139,,0.8139,
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],,No,,,CH4,No,,0.0395,,0.0395,
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],,No,,,CO2,No,,1.3518,,1.3518,
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],,No,,,C2H4,Yes,2.1461,0.511,-1.6351,0.511,
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],,No,,,C2H6,Yes,1.5051,0.2432,-1.262,0.2432,
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],,No,,,C3H6,Yes,2.0645,0.4602,-1.6043,0.4602,
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],,No,,,C3H8,Yes,0.8129,0.5408,-0.2721,0.5408,
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],,No,,,n-C4H10,Yes,,0.6213,,0.6213,
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],[*]Oc1c(c(cc(c1)c2ccccc2)c3ccccc3)[*],Yes,0.975,0.025,He,No,,1.6152,,1.6225,1.3305
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],[*]Oc1c(c(cc(c1)c2ccccc2)c3ccccc3)[*],Yes,0.975,0.025,H2,No,,1.4481,,1.4517,1.3083
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],[*]Oc1c(c(cc(c1)c2ccccc2)c3ccccc3)[*],Yes,0.975,0.025,N2,No,,0.1872,,0.1903,0.067
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],[*]Oc1c(c(cc(c1)c2ccccc2)c3ccccc3)[*],Yes,0.975,0.025,O2,No,,0.8107,,0.8139,0.6866
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],[*]Oc1c(c(cc(c1)c2ccccc2)c3ccccc3)[*],Yes,0.975,0.025,CH4,No,,0.0435,,0.0395,0.2017
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],[*]Oc1c(c(cc(c1)c2ccccc2)c3ccccc3)[*],Yes,0.975,0.025,CO2,No,,1.3503,,1.3518,1.2884
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],[*]Oc1c(c(cc(c1)c2ccccc2)c3ccccc3)[*],Yes,0.975,0.025,C2H4,Yes,1.7634,0.5179,-1.2456,0.511,0.7852
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],[*]Oc1c(c(cc(c1)c2ccccc2)c3ccccc3)[*],Yes,0.975,0.025,C2H6,Yes,1.0,0.2509,-0.7491,0.2432,0.5545
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],[*]Oc1c(c(cc(c1)c2ccccc2)c3ccccc3)[*],Yes,0.975,0.025,C3H6,Yes,1.6128,0.4677,-1.1451,0.4602,0.7595
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],[*]Oc1c(c(cc(c1)c2ccccc2)c3ccccc3)[*],Yes,0.975,0.025,C3H8,Yes,1.2041,0.5476,-0.6565,0.5408,0.8146
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],[*]Oc1c(c(cc(c1)c2ccccc2)c3ccccc3)[*],Yes,0.975,0.025,n-C4H10,Yes,,0.6275,,0.6213,0.869
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],[*]Oc1c(c(cc(c1)c2ccccc2)c3ccccc3)[*],Yes,0.75,0.25,He,No,,1.5495,,1.6225,1.3305
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],[*]Oc1c(c(cc(c1)c2ccccc2)c3ccccc3)[*],Yes,0.75,0.25,H2,No,,1.4159,,1.4517,1.3083
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],[*]Oc1c(c(cc(c1)c2ccccc2)c3ccccc3)[*],Yes,0.75,0.25,N2,No,,0.1595,,0.1903,0.067
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],[*]Oc1c(c(cc(c1)c2ccccc2)c3ccccc3)[*],Yes,0.75,0.25,O2,No,,0.7821,,0.8139,0.6866
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],[*]Oc1c(c(cc(c1)c2ccccc2)c3ccccc3)[*],Yes,0.75,0.25,CH4,No,,0.08,,0.0395,0.2017
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],[*]Oc1c(c(cc(c1)c2ccccc2)c3ccccc3)[*],Yes,0.75,0.25,CO2,No,,1.336,,1.3518,1.2884
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],[*]Oc1c(c(cc(c1)c2ccccc2)c3ccccc3)[*],Yes,0.75,0.25,C2H4,Yes,1.4624,0.5796,-0.8828,0.511,0.7852
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],[*]Oc1c(c(cc(c1)c2ccccc2)c3ccccc3)[*],Yes,0.75,0.25,C2H6,Yes,0.7782,0.321,-0.4572,0.2432,0.5545
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],[*]Oc1c(c(cc(c1)c2ccccc2)c3ccccc3)[*],Yes,0.75,0.25,C3H6,Yes,1.3424,0.535,-0.8074,0.4602,0.7595
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],[*]Oc1c(c(cc(c1)c2ccccc2)c3ccccc3)[*],Yes,0.75,0.25,C3H8,Yes,0.5051,0.6092,0.1041,0.5408,0.8146
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1c(C)cc(C)cc1[*],[*]Oc1c(c(cc(c1)c2ccccc2)c3ccccc3)[*],Yes,0.75,0.25,n-C4H10,Yes,,0.6832,,0.6213,0.869
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1ccc(cc1)C([*])(C)C,,No,,,He,No,,1.3291,,1.3291,
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1ccc(cc1)C([*])(C)C,,No,,,H2,No,,1.2881,,1.2881,
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1ccc(cc1)C([*])(C)C,,No,,,N2,No,,0.1367,,0.1367,
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1ccc(cc1)C([*])(C)C,,No,,,O2,No,,0.8269,,0.8269,
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1ccc(cc1)C([*])(C)C,,No,,,CH4,No,,0.3798,,0.3798,
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1ccc(cc1)C([*])(C)C,,No,,,CO2,No,,1.5828,,1.5828,
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1ccc(cc1)C([*])(C)C,,No,,,C2H4,Yes,,1.0849,,1.0849,
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1ccc(cc1)C([*])(C)C,,No,,,C2H6,Yes,,0.8375,,0.8375,
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1ccc(cc1)C([*])(C)C,,No,,,C3H6,Yes,0.9542,1.0433,0.0891,1.0433,
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1ccc(cc1)C([*])(C)C,,No,,,C3H8,Yes,0.3222,1.1101,0.7878,1.1101,
+Poly(aryl ethers) and Poly(aryl ether ketones),Poly(aryl ethers) and Poly(aryl ether ketones),[*]Oc1ccc(cc1)C([*])(C)C,,No,,,n-C4H10,Yes,,1.1711,,1.1711,
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],,No,,,He,No,,1.218,,1.218,
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],,No,,,H2,No,,1.2203,,1.2203,
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],,No,,,N2,No,,-0.5598,,-0.5598,
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],,No,,,O2,No,,0.1681,,0.1681,
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],,No,,,CH4,No,,-0.5613,,-0.5613,
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],,No,,,CO2,No,,0.7654,,0.7654,
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],,No,,,C2H4,Yes,,0.1462,,0.1462,
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],,No,,,C2H6,Yes,,-0.1978,,-0.1978,
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],,No,,,C3H6,Yes,-1.4895,0.0883,1.5777,0.0883,
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],,No,,,C3H8,Yes,-1.4895,0.1919,1.6814,0.1919,
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],,No,,,n-C4H10,Yes,,0.2896,,0.2896,
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.75,0.25,He,No,,1.2147,,1.218,1.2049
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.75,0.25,H2,No,,1.1515,,1.2203,0.9452
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.75,0.25,N2,No,,-0.4612,,-0.5598,-0.1651
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.75,0.25,O2,No,,0.2235,,0.1681,0.3897
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.75,0.25,CH4,No,,-0.5193,,-0.5613,-0.3933
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.75,0.25,CO2,No,,0.7525,,0.7654,0.7137
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.75,0.25,C2H4,Yes,,0.116,,0.1462,0.0252
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.75,0.25,C2H6,Yes,,-0.1974,,-0.1978,-0.1962
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.75,0.25,C3H6,Yes,0.0,0.0614,0.0614,0.0883,-0.0194
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.75,0.25,C3H8,Yes,-1.9031,0.1544,2.0575,0.1919,0.0421
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.75,0.25,n-C4H10,Yes,,0.2428,,0.2896,0.1023
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.667,0.333,He,No,,1.2136,,1.218,1.2049
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.667,0.333,H2,No,,1.1287,,1.2203,0.9452
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.667,0.333,N2,No,,-0.4284,,-0.5598,-0.1651
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.667,0.333,O2,No,,0.2419,,0.1681,0.3897
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.667,0.333,CH4,No,,-0.5053,,-0.5613,-0.3933
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.667,0.333,CO2,No,,0.7482,,0.7654,0.7137
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.667,0.333,C2H4,Yes,,0.1059,,0.1462,0.0252
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.667,0.333,C2H6,Yes,,-0.1973,,-0.1978,-0.1962
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.667,0.333,C3H6,Yes,0.8751,0.0524,-0.8226,0.0883,-0.0194
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.667,0.333,C3H8,Yes,-2.2757,0.142,2.4177,0.1919,0.0421
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.667,0.333,n-C4H10,Yes,,0.2272,,0.2896,0.1023
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.5,0.5,He,No,,1.2114,,1.218,1.2049
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.5,0.5,H2,No,,1.0827,,1.2203,0.9452
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.5,0.5,N2,No,,-0.3625,,-0.5598,-0.1651
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.5,0.5,O2,No,,0.2789,,0.1681,0.3897
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.5,0.5,CH4,No,,-0.4773,,-0.5613,-0.3933
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.5,0.5,CO2,No,,0.7396,,0.7654,0.7137
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.5,0.5,C2H4,Yes,,0.0857,,0.1462,0.0252
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.5,0.5,C2H6,Yes,,-0.197,,-0.1978,-0.1962
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.5,0.5,C3H6,Yes,1.5051,0.0345,-1.4707,0.0883,-0.0194
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.5,0.5,C3H8,Yes,-2.3565,0.117,2.4735,0.1919,0.0421
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.5,0.5,n-C4H10,Yes,,0.1959,,0.2896,0.1023
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.333,0.667,He,No,,1.2093,,1.218,1.2049
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.333,0.667,H2,No,,1.0368,,1.2203,0.9452
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.333,0.667,N2,No,,-0.2966,,-0.5598,-0.1651
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.333,0.667,O2,No,,0.3159,,0.1681,0.3897
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.333,0.667,CH4,No,,-0.4492,,-0.5613,-0.3933
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.333,0.667,CO2,No,,0.7309,,0.7654,0.7137
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.333,0.667,C2H4,Yes,,0.0655,,0.1462,0.0252
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.333,0.667,C2H6,Yes,,-0.1967,,-0.1978,-0.1962
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.333,0.667,C3H6,Yes,1.6435,0.0165,-1.627,0.0883,-0.0194
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.333,0.667,C3H8,Yes,-0.2757,0.092,0.3677,0.1919,0.0421
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.333,0.667,n-C4H10,Yes,,0.1647,,0.2896,0.1023
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.25,0.75,He,No,,1.2082,,1.218,1.2049
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.25,0.75,H2,No,,1.014,,1.2203,0.9452
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.25,0.75,N2,No,,-0.2638,,-0.5598,-0.1651
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.25,0.75,O2,No,,0.3343,,0.1681,0.3897
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.25,0.75,CH4,No,,-0.4353,,-0.5613,-0.3933
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.25,0.75,CO2,No,,0.7267,,0.7654,0.7137
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.25,0.75,C2H4,Yes,,0.0555,,0.1462,0.0252
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.25,0.75,C2H6,Yes,,-0.1966,,-0.1978,-0.1962
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.25,0.75,C3H6,Yes,1.7243,0.0076,-1.7167,0.0883,-0.0194
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.25,0.75,C3H8,Yes,0.6812,0.0795,-0.6017,0.1919,0.0421
+Polyimides and Polypyrrolones,Polyimides and Polypyrrolones,[*]CC(N1CCCC1=O)[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.25,0.75,n-C4H10,Yes,,0.1491,,0.2896,0.1023
+Polynorbornenes,Polynorbornenes,[*]=CC1CC2C(C(C=[*])1)C(C2[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C,,No,,,He,No,,2.7184,,2.7184,
+Polynorbornenes,Polynorbornenes,[*]=CC1CC2C(C(C=[*])1)C(C2[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C,,No,,,H2,No,,2.9561,,2.9561,
+Polynorbornenes,Polynorbornenes,[*]=CC1CC2C(C(C=[*])1)C(C2[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C,,No,,,N2,No,,2.1628,,2.1628,
+Polynorbornenes,Polynorbornenes,[*]=CC1CC2C(C(C=[*])1)C(C2[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C,,No,,,O2,No,,2.6061,,2.6061,
+Polynorbornenes,Polynorbornenes,[*]=CC1CC2C(C(C=[*])1)C(C2[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C,,No,,,CH4,No,,2.6539,,2.6539,
+Polynorbornenes,Polynorbornenes,[*]=CC1CC2C(C(C=[*])1)C(C2[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C,,No,,,CO2,No,,3.2237,,3.2237,
+Polynorbornenes,Polynorbornenes,[*]=CC1CC2C(C(C=[*])1)C(C2[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C,,No,,,C2H4,Yes,,3.0502,,3.0502,
+Polynorbornenes,Polynorbornenes,[*]=CC1CC2C(C(C=[*])1)C(C2[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C,,No,,,C2H6,Yes,2.6812,2.8586,0.1773,2.8586,
+Polynorbornenes,Polynorbornenes,[*]=CC1CC2C(C(C=[*])1)C(C2[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C,,No,,,C3H6,Yes,,2.9973,,2.9973,
+Polynorbornenes,Polynorbornenes,[*]=CC1CC2C(C(C=[*])1)C(C2[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C,,No,,,C3H8,Yes,2.716,3.0524,0.3364,3.0524,
+Polynorbornenes,Polynorbornenes,[*]=CC1CC2C(C(C=[*])1)C(C2[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C,,No,,,n-C4H10,Yes,3.3263,3.0971,-0.2292,3.0971,
+Polynorbornenes,Polynorbornenes,[*]CC1CC2C(C(C[*])1)C(C2[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C,,No,,,He,No,,2.6302,,2.6302,
+Polynorbornenes,Polynorbornenes,[*]CC1CC2C(C(C[*])1)C(C2[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C,,No,,,H2,No,,2.8299,,2.8299,
+Polynorbornenes,Polynorbornenes,[*]CC1CC2C(C(C[*])1)C(C2[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C,,No,,,N2,No,,2.0393,,2.0393,
+Polynorbornenes,Polynorbornenes,[*]CC1CC2C(C(C[*])1)C(C2[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C,,No,,,O2,No,,2.5068,,2.5068,
+Polynorbornenes,Polynorbornenes,[*]CC1CC2C(C(C[*])1)C(C2[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C,,No,,,CH4,No,,2.4873,,2.4873,
+Polynorbornenes,Polynorbornenes,[*]CC1CC2C(C(C[*])1)C(C2[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C,,No,,,CO2,No,,3.0999,,3.0999,
+Polynorbornenes,Polynorbornenes,[*]CC1CC2C(C(C[*])1)C(C2[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C,,No,,,C2H4,Yes,,2.8979,,2.8979,
+Polynorbornenes,Polynorbornenes,[*]CC1CC2C(C(C[*])1)C(C2[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C,,No,,,C2H6,Yes,2.4843,2.7034,0.2191,2.7034,
+Polynorbornenes,Polynorbornenes,[*]CC1CC2C(C(C[*])1)C(C2[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C,,No,,,C3H6,Yes,,2.84,,2.84,
+Polynorbornenes,Polynorbornenes,[*]CC1CC2C(C(C[*])1)C(C2[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C,,No,,,C3H8,Yes,2.4771,2.9006,0.4235,2.9006,
+Polynorbornenes,Polynorbornenes,[*]CC1CC2C(C(C[*])1)C(C2[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)[Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C,,No,,,n-C4H10,Yes,3.0569,2.9508,-0.1061,2.9508,
+Polynorbornenes,Polynorbornenes,[*]C1C2CC(C1[*])C([Si](C)(C)C)C2,,No,,,He,No,,2.9437,,2.9437,
+Polynorbornenes,Polynorbornenes,[*]C1C2CC(C1[*])C([Si](C)(C)C)C2,,No,,,H2,No,,3.2446,,3.2446,
+Polynorbornenes,Polynorbornenes,[*]C1C2CC(C1[*])C([Si](C)(C)C)C2,,No,,,N2,No,,2.4965,,2.4965,
+Polynorbornenes,Polynorbornenes,[*]C1C2CC(C1[*])C([Si](C)(C)C)C2,,No,,,O2,No,,2.8928,,2.8928,
+Polynorbornenes,Polynorbornenes,[*]C1C2CC(C1[*])C([Si](C)(C)C)C2,,No,,,CH4,No,,3.0106,,3.0106,
+Polynorbornenes,Polynorbornenes,[*]C1C2CC(C1[*])C([Si](C)(C)C)C2,,No,,,CO2,No,,3.6021,,3.6021,
+Polynorbornenes,Polynorbornenes,[*]C1C2CC(C1[*])C([Si](C)(C)C)C2,,No,,,C2H4,Yes,,3.5135,,3.5135,
+Polynorbornenes,Polynorbornenes,[*]C1C2CC(C1[*])C([Si](C)(C)C)C2,,No,,,C2H6,Yes,3.1553,3.316,0.1606,3.316,
+Polynorbornenes,Polynorbornenes,[*]C1C2CC(C1[*])C([Si](C)(C)C)C2,,No,,,C3H6,Yes,,3.4575,,3.4575,
+Polynorbornenes,Polynorbornenes,[*]C1C2CC(C1[*])C([Si](C)(C)C)C2,,No,,,C3H8,Yes,3.2405,3.5167,0.2761,3.5167,
+Polynorbornenes,Polynorbornenes,[*]C1C2CC(C1[*])C([Si](C)(C)C)C2,,No,,,n-C4H10,Yes,4.243,3.5614,-0.6817,3.5614,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C[C@@H]([Si](C)(C)C)C1C2,[*]C1C([*])C2C[C@H]([Si](C)(C)C)C1C2,Yes,0.25,0.75,He,No,,2.9657,,2.9657,2.9657
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C[C@@H]([Si](C)(C)C)C1C2,[*]C1C([*])C2C[C@H]([Si](C)(C)C)C1C2,Yes,0.25,0.75,H2,No,,3.2966,,3.2966,3.2966
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C[C@@H]([Si](C)(C)C)C1C2,[*]C1C([*])C2C[C@H]([Si](C)(C)C)C1C2,Yes,0.25,0.75,N2,No,,2.5395,,2.5395,2.5395
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C[C@@H]([Si](C)(C)C)C1C2,[*]C1C([*])C2C[C@H]([Si](C)(C)C)C1C2,Yes,0.25,0.75,O2,No,,2.9325,,2.9325,2.9325
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C[C@@H]([Si](C)(C)C)C1C2,[*]C1C([*])C2C[C@H]([Si](C)(C)C)C1C2,Yes,0.25,0.75,CH4,No,,3.1176,,3.1176,3.1176
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C[C@@H]([Si](C)(C)C)C1C2,[*]C1C([*])C2C[C@H]([Si](C)(C)C)C1C2,Yes,0.25,0.75,CO2,No,,3.6794,,3.6794,3.6794
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C[C@@H]([Si](C)(C)C)C1C2,[*]C1C([*])C2C[C@H]([Si](C)(C)C)C1C2,Yes,0.25,0.75,C2H4,Yes,,3.6187,,3.6187,3.6187
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C[C@@H]([Si](C)(C)C)C1C2,[*]C1C([*])C2C[C@H]([Si](C)(C)C)C1C2,Yes,0.25,0.75,C2H6,Yes,2.7924,3.4281,0.6357,3.4281,3.4281
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C[C@@H]([Si](C)(C)C)C1C2,[*]C1C([*])C2C[C@H]([Si](C)(C)C)C1C2,Yes,0.25,0.75,C3H6,Yes,,3.57,,3.57,3.57
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C[C@@H]([Si](C)(C)C)C1C2,[*]C1C([*])C2C[C@H]([Si](C)(C)C)C1C2,Yes,0.25,0.75,C3H8,Yes,,3.6228,,3.6228,3.6228
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C[C@@H]([Si](C)(C)C)C1C2,[*]C1C([*])C2C[C@H]([Si](C)(C)C)C1C2,Yes,0.25,0.75,n-C4H10,Yes,,3.6595,,3.6595,3.6595
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([CH]([Si](C)(C)C)C3)C1C2,,No,,,He,No,,2.9786,,2.9786,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([CH]([Si](C)(C)C)C3)C1C2,,No,,,H2,No,,3.3283,,3.3283,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([CH]([Si](C)(C)C)C3)C1C2,,No,,,N2,No,,2.6618,,2.6618,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([CH]([Si](C)(C)C)C3)C1C2,,No,,,O2,No,,2.9692,,2.9692,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([CH]([Si](C)(C)C)C3)C1C2,,No,,,CH4,No,,3.3172,,3.3172,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([CH]([Si](C)(C)C)C3)C1C2,,No,,,CO2,No,,3.794,,3.794,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([CH]([Si](C)(C)C)C3)C1C2,,No,,,C2H4,Yes,,3.7875,,3.7875,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([CH]([Si](C)(C)C)C3)C1C2,,No,,,C2H6,Yes,3.1335,3.6094,0.4759,3.6094,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([CH]([Si](C)(C)C)C3)C1C2,,No,,,C3H6,Yes,,3.7432,,3.7432,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([CH]([Si](C)(C)C)C3)C1C2,,No,,,C3H8,Yes,3.1673,3.7911,0.6238,3.7911,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([CH]([Si](C)(C)C)C3)C1C2,,No,,,n-C4H10,Yes,,3.824,,3.824,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@H]([Si](C)(C)C)[C@H]3[Si](C)(C)C)C1C2,,No,,,He,No,,3.3312,,3.3312,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@H]([Si](C)(C)C)[C@H]3[Si](C)(C)C)C1C2,,No,,,H2,No,,3.7195,,3.7195,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@H]([Si](C)(C)C)[C@H]3[Si](C)(C)C)C1C2,,No,,,N2,No,,3.0894,,3.0894,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@H]([Si](C)(C)C)[C@H]3[Si](C)(C)C)C1C2,,No,,,O2,No,,3.4359,,3.4359,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@H]([Si](C)(C)C)[C@H]3[Si](C)(C)C)C1C2,,No,,,CH4,No,,3.5764,,3.5764,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@H]([Si](C)(C)C)[C@H]3[Si](C)(C)C)C1C2,,No,,,CO2,No,,4.1215,,4.1215,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@H]([Si](C)(C)C)[C@H]3[Si](C)(C)C)C1C2,,No,,,C2H4,Yes,,4.0292,,4.0292,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@H]([Si](C)(C)C)[C@H]3[Si](C)(C)C)C1C2,,No,,,C2H6,Yes,3.7782,3.8354,0.0573,3.8354,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@H]([Si](C)(C)C)[C@H]3[Si](C)(C)C)C1C2,,No,,,C3H6,Yes,,3.9801,,3.9801,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@H]([Si](C)(C)C)[C@H]3[Si](C)(C)C)C1C2,,No,,,C3H8,Yes,3.8751,4.0344,0.1593,4.0344,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@H]([Si](C)(C)C)[C@H]3[Si](C)(C)C)C1C2,,No,,,n-C4H10,Yes,,4.0752,,4.0752,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@@H]([Ge](C)(C)C)C3)C1C2,,No,,,He,No,,2.5557,,2.5557,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@@H]([Ge](C)(C)C)C3)C1C2,,No,,,H2,No,,2.8256,,2.8256,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@@H]([Ge](C)(C)C)C3)C1C2,,No,,,N2,No,,1.9788,,1.9788,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@@H]([Ge](C)(C)C)C3)C1C2,,No,,,O2,No,,2.3079,,2.3079,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@@H]([Ge](C)(C)C)C3)C1C2,,No,,,CH4,No,,2.5243,,2.5243,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@@H]([Ge](C)(C)C)C3)C1C2,,No,,,CO2,No,,3.197,,3.197,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@@H]([Ge](C)(C)C)C3)C1C2,,No,,,C2H4,Yes,,3.1089,,3.1089,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@@H]([Ge](C)(C)C)C3)C1C2,,No,,,C2H6,Yes,2.9731,2.8588,-0.1143,2.8588,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@@H]([Ge](C)(C)C)C3)C1C2,,No,,,C3H6,Yes,,3.0473,,3.0473,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@@H]([Ge](C)(C)C)C3)C1C2,,No,,,C3H8,Yes,3.0212,3.1114,0.0902,3.1114,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@@H]([Ge](C)(C)C)C3)C1C2,,No,,,n-C4H10,Yes,,3.157,,3.157,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@@H]([Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)C3)C1C2,,No,,,He,No,,2.8773,,2.8773,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@@H]([Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)C3)C1C2,,No,,,H2,No,,3.2082,,3.2082,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@@H]([Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)C3)C1C2,,No,,,N2,No,,2.5358,,2.5358,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@@H]([Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)C3)C1C2,,No,,,O2,No,,2.8222,,2.8222,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@@H]([Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)C3)C1C2,,No,,,CH4,No,,3.1245,,3.1245,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@@H]([Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)C3)C1C2,,No,,,CO2,No,,3.5486,,3.5486,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@@H]([Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)C3)C1C2,,No,,,C2H4,Yes,,3.4752,,3.4752,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@@H]([Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)C3)C1C2,,No,,,C2H6,Yes,3.3747,3.3079,-0.0669,3.3079,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@@H]([Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)C3)C1C2,,No,,,C3H6,Yes,,3.4169,,3.4169,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@@H]([Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)C3)C1C2,,No,,,C3H8,Yes,3.5428,3.4723,-0.0705,3.4723,
+Polynorbornenes,Polynorbornenes,[*]C1C([*])C2C3C([C@@H]([Si](O[Si](C)(C)C)(O[Si](C)(C)C)O[Si](C)(C)C)C3)C1C2,,No,,,n-C4H10,Yes,,3.5126,,3.5126,
+Polyolefins,Polyolefins,[*]CC[*],,No,,,He,No,,0.1786,,0.1786,
+Polyolefins,Polyolefins,[*]CC[*],,No,,,H2,No,,0.1982,,0.1982,
+Polyolefins,Polyolefins,[*]CC[*],,No,,,N2,No,,-1.0333,,-1.0333,
+Polyolefins,Polyolefins,[*]CC[*],,No,,,O2,No,,-0.4924,,-0.4924,
+Polyolefins,Polyolefins,[*]CC[*],,No,,,CH4,No,,-0.509,,-0.509,
+Polyolefins,Polyolefins,[*]CC[*],,No,,,CO2,No,,0.522,,0.522,
+Polyolefins,Polyolefins,[*]CC[*],,No,,,C2H4,Yes,1.0414,0.3153,-0.7261,0.3153,
+Polyolefins,Polyolefins,[*]CC[*],,No,,,C2H6,Yes,,0.011,,0.011,
+Polyolefins,Polyolefins,[*]CC[*],,No,,,C3H6,Yes,,0.2693,,0.2693,
+Polyolefins,Polyolefins,[*]CC[*],,No,,,C3H8,Yes,1.3979,0.3444,-1.0536,0.3444,
+Polyolefins,Polyolefins,[*]CC[*],,No,,,n-C4H10,Yes,,0.4013,,0.4013,
+Polyolefins,Polyolefins,[*]OCCOC(=O)c1ccc(C(=O)[*])cc1,,No,,,He,No,,0.6148,,0.6148,
+Polyolefins,Polyolefins,[*]OCCOC(=O)c1ccc(C(=O)[*])cc1,,No,,,H2,No,,0.5677,,0.5677,
+Polyolefins,Polyolefins,[*]OCCOC(=O)c1ccc(C(=O)[*])cc1,,No,,,N2,No,,-1.7277,,-1.7277,
+Polyolefins,Polyolefins,[*]OCCOC(=O)c1ccc(C(=O)[*])cc1,,No,,,O2,No,,-1.1271,,-1.1271,
+Polyolefins,Polyolefins,[*]OCCOC(=O)c1ccc(C(=O)[*])cc1,,No,,,CH4,No,,-1.7858,,-1.7858,
+Polyolefins,Polyolefins,[*]OCCOC(=O)c1ccc(C(=O)[*])cc1,,No,,,CO2,No,,-0.6619,,-0.6619,
+Polyolefins,Polyolefins,[*]OCCOC(=O)c1ccc(C(=O)[*])cc1,,No,,,C2H4,Yes,-0.0458,-1.3833,-1.3376,-1.3833,
+Polyolefins,Polyolefins,[*]OCCOC(=O)c1ccc(C(=O)[*])cc1,,No,,,C2H6,Yes,-0.301,-1.5419,-1.2409,-1.5419,
+Polyolefins,Polyolefins,[*]OCCOC(=O)c1ccc(C(=O)[*])cc1,,No,,,C3H6,Yes,,-1.3777,,-1.3777,
+Polyolefins,Polyolefins,[*]OCCOC(=O)c1ccc(C(=O)[*])cc1,,No,,,C3H8,Yes,,-1.3445,,-1.3445,
+Polyolefins,Polyolefins,[*]OCCOC(=O)c1ccc(C(=O)[*])cc1,,No,,,n-C4H10,Yes,,-1.2984,,-1.2984,
+Polyolefins,Polyolefins,[*]CC[*],,No,,,He,No,,0.1786,,0.1786,
+Polyolefins,Polyolefins,[*]CC[*],,No,,,H2,No,,0.1982,,0.1982,
+Polyolefins,Polyolefins,[*]CC[*],,No,,,N2,No,,-1.0333,,-1.0333,
+Polyolefins,Polyolefins,[*]CC[*],,No,,,O2,No,,-0.4924,,-0.4924,
+Polyolefins,Polyolefins,[*]CC[*],,No,,,CH4,No,,-0.509,,-0.509,
+Polyolefins,Polyolefins,[*]CC[*],,No,,,CO2,No,,0.522,,0.522,
+Polyolefins,Polyolefins,[*]CC[*],,No,,,C2H4,Yes,2.1139,0.3153,-1.7986,0.3153,
+Polyolefins,Polyolefins,[*]CC[*],,No,,,C2H6,Yes,2.0792,0.011,-2.0682,0.011,
+Polyolefins,Polyolefins,[*]CC[*],,No,,,C3H6,Yes,,0.2693,,0.2693,
+Polyolefins,Polyolefins,[*]CC[*],,No,,,C3H8,Yes,,0.3444,,0.3444,
+Polyolefins,Polyolefins,[*]CC[*],,No,,,n-C4H10,Yes,,0.4013,,0.4013,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(C(C)C)[*],,No,,,He,No,,3.4244,,3.4244,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(C(C)C)[*],,No,,,H2,No,,3.7544,,3.7544,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(C(C)C)[*],,No,,,N2,No,,3.0859,,3.0859,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(C(C)C)[*],,No,,,O2,No,,3.3963,,3.3963,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(C(C)C)[*],,No,,,CH4,No,,3.4482,,3.4482,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(C(C)C)[*],,No,,,CO2,No,,3.998,,3.998,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(C(C)C)[*],,No,,,C2H4,Yes,,3.7804,,3.7804,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(C(C)C)[*],,No,,,C2H6,Yes,3.5682,3.6133,0.0451,3.6133,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(C(C)C)[*],,No,,,C3H6,Yes,,3.7208,,3.7208,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(C(C)C)[*],,No,,,C3H8,Yes,3.6721,3.7795,0.1074,3.7795,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(C(C)C)[*],,No,,,n-C4H10,Yes,4.6053,3.8299,-0.7754,3.8299,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CC(C)C)[*],,No,,,He,No,,2.6549,,2.6549,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CC(C)C)[*],,No,,,H2,No,,2.9065,,2.9065,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CC(C)C)[*],,No,,,N2,No,,1.9763,,1.9763,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CC(C)C)[*],,No,,,O2,No,,2.3928,,2.3928,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CC(C)C)[*],,No,,,CH4,No,,2.2751,,2.2751,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CC(C)C)[*],,No,,,CO2,No,,2.9201,,2.9201,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CC(C)C)[*],,No,,,C2H4,Yes,,2.6358,,2.6358,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CC(C)C)[*],,No,,,C2H6,Yes,2.4472,2.4925,0.0454,2.4925,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CC(C)C)[*],,No,,,C3H6,Yes,,2.6003,,2.6003,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CC(C)C)[*],,No,,,C3H8,Yes,3.2304,2.6404,-0.5901,2.6404,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CC(C)C)[*],,No,,,n-C4H10,Yes,,2.6758,,2.6758,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCC(C)C)[*],,No,,,He,No,,2.3899,,2.3899,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCC(C)C)[*],,No,,,H2,No,,2.5565,,2.5565,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCC(C)C)[*],,No,,,N2,No,,1.7069,,1.7069,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCC(C)C)[*],,No,,,O2,No,,2.1229,,2.1229,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCC(C)C)[*],,No,,,CH4,No,,2.0481,,2.0481,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCC(C)C)[*],,No,,,CO2,No,,2.5975,,2.5975,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCC(C)C)[*],,No,,,C2H4,Yes,,2.4662,,2.4662,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCC(C)C)[*],,No,,,C2H6,Yes,2.2041,2.2814,0.0773,2.2814,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCC(C)C)[*],,No,,,C3H6,Yes,,2.4092,,2.4092,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCC(C)C)[*],,No,,,C3H8,Yes,2.7818,2.4667,-0.315,2.4667,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCC(C)C)[*],,No,,,n-C4H10,Yes,,2.5085,,2.5085,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCC)[*],,No,,,He,No,,2.0278,,2.0278,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCC)[*],,No,,,H2,No,,2.221,,2.221,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCC)[*],,No,,,N2,No,,1.0925,,1.0925,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCC)[*],,No,,,O2,No,,1.5803,,1.5803,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCC)[*],,No,,,CH4,No,,1.322,,1.322,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCC)[*],,No,,,CO2,No,,2.102,,2.102,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCC)[*],,No,,,C2H4,Yes,,1.9153,,1.9153,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCC)[*],,No,,,C2H6,Yes,1.2041,1.6749,0.4708,1.6749,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCC)[*],,No,,,C3H6,Yes,,1.8663,,1.8663,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCC)[*],,No,,,C3H8,Yes,1.5441,1.933,0.3889,1.933,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCC)[*],,No,,,n-C4H10,Yes,2.6128,1.9915,-0.6213,1.9915,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCC)[*],,No,,,He,No,,1.9635,,1.9635,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCC)[*],,No,,,H2,No,,2.1569,,2.1569,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCC)[*],,No,,,N2,No,,1.3347,,1.3347,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCC)[*],,No,,,O2,No,,1.7615,,1.7615,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCC)[*],,No,,,CH4,No,,1.7302,,1.7302,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCC)[*],,No,,,CO2,No,,2.3016,,2.3016,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCC)[*],,No,,,C2H4,Yes,,2.1781,,2.1781,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCC)[*],,No,,,C2H6,Yes,1.9956,1.9729,-0.0228,1.9729,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCC)[*],,No,,,C3H6,Yes,,2.1211,,2.1211,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCC)[*],,No,,,C3H8,Yes,2.6232,2.181,-0.4423,2.181,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCC)[*],,No,,,n-C4H10,Yes,3.3222,2.2297,-1.0925,2.2297,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCC)[*],,No,,,He,No,,1.9751,,1.9751,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCC)[*],,No,,,H2,No,,2.1589,,2.1589,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCC)[*],,No,,,N2,No,,1.3971,,1.3971,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCC)[*],,No,,,O2,No,,1.8048,,1.8048,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCC)[*],,No,,,CH4,No,,1.8404,,1.8404,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCC)[*],,No,,,CO2,No,,2.3791,,2.3791,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCC)[*],,No,,,C2H4,Yes,,2.2285,,2.2285,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCC)[*],,No,,,C2H6,Yes,2.1399,2.0376,-0.1023,2.0376,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCC)[*],,No,,,C3H6,Yes,,2.1693,,2.1693,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCC)[*],,No,,,C3H8,Yes,2.6532,2.2311,-0.4221,2.2311,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCC)[*],,No,,,n-C4H10,Yes,3.2672,2.2768,-0.9904,2.2768,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCCC)[*],,No,,,He,No,,1.9487,,1.9487,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCCC)[*],,No,,,H2,No,,2.1721,,2.1721,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCCC)[*],,No,,,N2,No,,1.4652,,1.4652,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCCC)[*],,No,,,O2,No,,1.8483,,1.8483,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCCC)[*],,No,,,CH4,No,,1.9026,,1.9026,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCCC)[*],,No,,,CO2,No,,2.4327,,2.4327,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCCC)[*],,No,,,C2H4,Yes,,2.2795,,2.2795,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCCC)[*],,No,,,C2H6,Yes,2.3424,2.0875,-0.2549,2.0875,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCCC)[*],,No,,,C3H6,Yes,,2.2154,,2.2154,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCCC)[*],,No,,,C3H8,Yes,2.8692,2.2804,-0.5888,2.2804,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCCC)[*],,No,,,n-C4H10,Yes,3.6628,2.3263,-1.3365,2.3263,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCCCC)[*],,No,,,He,No,,1.9199,,1.9199,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCCCC)[*],,No,,,H2,No,,2.149,,2.149,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCCCC)[*],,No,,,N2,No,,1.4827,,1.4827,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCCCC)[*],,No,,,O2,No,,1.8741,,1.8741,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCCCC)[*],,No,,,CH4,No,,1.9452,,1.9452,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCCCC)[*],,No,,,CO2,No,,2.4648,,2.4648,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCCCC)[*],,No,,,C2H4,Yes,,2.3155,,2.3155,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCCCC)[*],,No,,,C2H6,Yes,2.3802,2.1237,-0.2565,2.1237,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCCCC)[*],,No,,,C3H6,Yes,,2.248,,2.248,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCCCC)[*],,No,,,C3H8,Yes,2.9243,2.3139,-0.6104,2.3139,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C(CCCCCCCC)[*],,No,,,n-C4H10,Yes,3.5911,2.3676,-1.2234,2.3676,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([*])([Si](C)(C)C),,No,,,He,No,,3.7778,,3.7778,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([*])([Si](C)(C)C),,No,,,H2,No,,4.1721,,4.1721,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([*])([Si](C)(C)C),,No,,,N2,No,,3.7933,,3.7933,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([*])([Si](C)(C)C),,No,,,O2,No,,3.9418,,3.9418,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([*])([Si](C)(C)C),,No,,,CH4,No,,4.1851,,4.1851,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([*])([Si](C)(C)C),,No,,,CO2,No,,4.5301,,4.5301,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([*])([Si](C)(C)C),,No,,,C2H4,Yes,,4.4543,,4.4543,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([*])([Si](C)(C)C),,No,,,C2H6,Yes,4.4914,4.343,-0.1484,4.343,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([*])([Si](C)(C)C),,No,,,C3H6,Yes,,4.4231,,4.4231,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([*])([Si](C)(C)C),,No,,,C3H8,Yes,4.5798,4.4534,-0.1264,4.4534,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([*])([Si](C)(C)C),,No,,,n-C4H10,Yes,,4.4732,,4.4732,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([Si](C)(C)C)[*],,No,,,He,No,,3.7778,,3.7778,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([Si](C)(C)C)[*],,No,,,H2,No,,4.1721,,4.1721,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([Si](C)(C)C)[*],,No,,,N2,No,,3.7933,,3.7933,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([Si](C)(C)C)[*],,No,,,O2,No,,3.9418,,3.9418,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([Si](C)(C)C)[*],,No,,,CH4,No,,4.1851,,4.1851,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([Si](C)(C)C)[*],,No,,,CO2,No,,4.5301,,4.5301,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([Si](C)(C)C)[*],,No,,,C2H4,Yes,,4.4543,,4.4543,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([Si](C)(C)C)[*],,No,,,C2H6,Yes,4.415,4.343,-0.072,4.343,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([Si](C)(C)C)[*],,No,,,C3H6,Yes,,4.4231,,4.4231,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([Si](C)(C)C)[*],,No,,,C3H8,Yes,4.4814,4.4534,-0.028,4.4534,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([Si](C)(C)C)[*],,No,,,n-C4H10,Yes,,4.4732,,4.4732,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([*])([Si](C)(C)C),,No,,,He,No,,3.7778,,3.7778,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([*])([Si](C)(C)C),,No,,,H2,No,,4.1721,,4.1721,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([*])([Si](C)(C)C),,No,,,N2,No,,3.7933,,3.7933,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([*])([Si](C)(C)C),,No,,,O2,No,,3.9418,,3.9418,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([*])([Si](C)(C)C),,No,,,CH4,No,,4.1851,,4.1851,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([*])([Si](C)(C)C),,No,,,CO2,No,,4.5301,,4.5301,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([*])([Si](C)(C)C),,No,,,C2H4,Yes,,4.4543,,4.4543,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([*])([Si](C)(C)C),,No,,,C2H6,Yes,4.4914,4.343,-0.1484,4.343,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([*])([Si](C)(C)C),,No,,,C3H6,Yes,,4.4231,,4.4231,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([*])([Si](C)(C)C),,No,,,C3H8,Yes,4.5798,4.4534,-0.1264,4.4534,
+Polypropynes & Polyalkynes,Polypropynes & Polyalkynes,[*]C(C)=C([*])([Si](C)(C)C),,No,,,n-C4H10,Yes,,4.4732,,4.4732,
+Polysulfones,Polysulfones,[*]Oc1ccc(S(=O)(=O)c2ccc(Oc3ccc(C(C)(C)c4ccc([*])cc4)cc3)cc2)cc1,,No,,,He,No,,1.1278,,1.1278,
+Polysulfones,Polysulfones,[*]Oc1ccc(S(=O)(=O)c2ccc(Oc3ccc(C(C)(C)c4ccc([*])cc4)cc3)cc2)cc1,,No,,,H2,No,,1.1707,,1.1707,
+Polysulfones,Polysulfones,[*]Oc1ccc(S(=O)(=O)c2ccc(Oc3ccc(C(C)(C)c4ccc([*])cc4)cc3)cc2)cc1,,No,,,N2,No,,-0.5947,,-0.5947,
+Polysulfones,Polysulfones,[*]Oc1ccc(S(=O)(=O)c2ccc(Oc3ccc(C(C)(C)c4ccc([*])cc4)cc3)cc2)cc1,,No,,,O2,No,,0.15,,0.15,
+Polysulfones,Polysulfones,[*]Oc1ccc(S(=O)(=O)c2ccc(Oc3ccc(C(C)(C)c4ccc([*])cc4)cc3)cc2)cc1,,No,,,CH4,No,,-0.5071,,-0.5071,
+Polysulfones,Polysulfones,[*]Oc1ccc(S(=O)(=O)c2ccc(Oc3ccc(C(C)(C)c4ccc([*])cc4)cc3)cc2)cc1,,No,,,CO2,No,,0.7809,,0.7809,
+Polysulfones,Polysulfones,[*]Oc1ccc(S(=O)(=O)c2ccc(Oc3ccc(C(C)(C)c4ccc([*])cc4)cc3)cc2)cc1,,No,,,C2H4,Yes,,0.0919,,0.0919,
+Polysulfones,Polysulfones,[*]Oc1ccc(S(=O)(=O)c2ccc(Oc3ccc(C(C)(C)c4ccc([*])cc4)cc3)cc2)cc1,,No,,,C2H6,Yes,,-0.1915,,-0.1915,
+Polysulfones,Polysulfones,[*]Oc1ccc(S(=O)(=O)c2ccc(Oc3ccc(C(C)(C)c4ccc([*])cc4)cc3)cc2)cc1,,No,,,C3H6,Yes,1.42,0.0342,-1.3857,0.0342,
+Polysulfones,Polysulfones,[*]Oc1ccc(S(=O)(=O)c2ccc(Oc3ccc(C(C)(C)c4ccc([*])cc4)cc3)cc2)cc1,,No,,,C3H8,Yes,1.574,0.1329,-1.4412,0.1329,
+Polysulfones,Polysulfones,[*]Oc1ccc(S(=O)(=O)c2ccc(Oc3ccc(C(C)(C)c4ccc([*])cc4)cc3)cc2)cc1,,No,,,n-C4H10,Yes,,0.2206,,0.2206,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C=C)O[*],,No,,,He,No,,2.1566,,2.1566,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C=C)O[*],,No,,,H2,No,,2.52,,2.52,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C=C)O[*],,No,,,N2,No,,1.7589,,1.7589,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C=C)O[*],,No,,,O2,No,,2.1975,,2.1975,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C=C)O[*],,No,,,CH4,No,,2.3047,,2.3047,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C=C)O[*],,No,,,CO2,No,,3.0527,,3.0527,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C=C)O[*],,No,,,C2H4,Yes,3.301,2.8306,-0.4704,2.8306,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C=C)O[*],,No,,,C2H6,Yes,,2.605,,2.605,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C=C)O[*],,No,,,C3H6,Yes,3.7202,2.7744,-0.9458,2.7744,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C=C)O[*],,No,,,C3H8,Yes,,2.8358,,2.8358,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C=C)O[*],,No,,,n-C4H10,Yes,,2.891,,2.891,
+Silicone rubber and variants,Silicone rubber and variants,[*][Si](C)(C)O[*],,No,,,He,No,,2.541,,2.541,
+Silicone rubber and variants,Silicone rubber and variants,[*][Si](C)(C)O[*],,No,,,H2,No,,2.9102,,2.9102,
+Silicone rubber and variants,Silicone rubber and variants,[*][Si](C)(C)O[*],,No,,,N2,No,,2.4444,,2.4444,
+Silicone rubber and variants,Silicone rubber and variants,[*][Si](C)(C)O[*],,No,,,O2,No,,2.7513,,2.7513,
+Silicone rubber and variants,Silicone rubber and variants,[*][Si](C)(C)O[*],,No,,,CH4,No,,2.9626,,2.9626,
+Silicone rubber and variants,Silicone rubber and variants,[*][Si](C)(C)O[*],,No,,,CO2,No,,3.4943,,3.4943,
+Silicone rubber and variants,Silicone rubber and variants,[*][Si](C)(C)O[*],,No,,,C2H4,Yes,,3.4526,,3.4526,
+Silicone rubber and variants,Silicone rubber and variants,[*][Si](C)(C)O[*],,No,,,C2H6,Yes,,3.254,,3.254,
+Silicone rubber and variants,Silicone rubber and variants,[*][Si](C)(C)O[*],,No,,,C3H6,Yes,3.8122,3.3988,-0.4134,3.3988,
+Silicone rubber and variants,Silicone rubber and variants,[*][Si](C)(C)O[*],,No,,,C3H8,Yes,3.5366,3.4524,-0.0841,3.4524,
+Silicone rubber and variants,Silicone rubber and variants,[*][Si](C)(C)O[*],,No,,,n-C4H10,Yes,,3.4904,,3.4904,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,He,No,,2.541,,2.541,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,H2,No,,2.9102,,2.9102,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,N2,No,,2.4444,,2.4444,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,O2,No,,2.7513,,2.7513,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,CH4,No,,2.9626,,2.9626,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,CO2,No,,3.4943,,3.4943,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,C2H4,Yes,4.4771,3.4526,-1.0245,3.4526,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,C2H6,Yes,4.4914,3.254,-1.2373,3.254,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,C3H6,Yes,,3.3988,,3.3988,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,C3H8,Yes,,3.4524,,3.4524,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,n-C4H10,Yes,,3.4904,,3.4904,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,He,No,,2.541,,2.541,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,H2,No,,2.9102,,2.9102,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,N2,No,,2.4444,,2.4444,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,O2,No,,2.7513,,2.7513,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,CH4,No,,2.9626,,2.9626,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,CO2,No,,3.4943,,3.4943,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,C2H4,Yes,3.5315,3.4526,-0.0789,3.4526,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,C2H6,Yes,3.6532,3.254,-0.3992,3.254,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,C3H6,Yes,,3.3988,,3.3988,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,C3H8,Yes,3.9542,3.4524,-0.5018,3.4524,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,n-C4H10,Yes,,3.4904,,3.4904,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CC)[*],,No,,,He,No,,2.3537,,2.3537,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CC)[*],,No,,,H2,No,,2.6928,,2.6928,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CC)[*],,No,,,N2,No,,2.1996,,2.1996,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CC)[*],,No,,,O2,No,,2.5364,,2.5364,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CC)[*],,No,,,CH4,No,,2.6712,,2.6712,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CC)[*],,No,,,CO2,No,,3.1998,,3.1998,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CC)[*],,No,,,C2H4,Yes,3.1139,3.1387,0.0248,3.1387,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CC)[*],,No,,,C2H6,Yes,3.1761,2.9624,-0.2137,2.9624,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CC)[*],,No,,,C3H6,Yes,,3.0898,,3.0898,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CC)[*],,No,,,C3H8,Yes,3.4771,3.1407,-0.3364,3.1407,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CC)[*],,No,,,n-C4H10,Yes,,3.1825,,3.1825,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCC)[*],,No,,,He,No,,2.4158,,2.4158,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCC)[*],,No,,,H2,No,,2.7845,,2.7845,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCC)[*],,No,,,N2,No,,2.2648,,2.2648,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCC)[*],,No,,,O2,No,,2.6255,,2.6255,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCC)[*],,No,,,CH4,No,,2.7791,,2.7791,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCC)[*],,No,,,CO2,No,,3.364,,3.364,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCC)[*],,No,,,C2H4,Yes,3.1461,3.2414,0.0953,3.2414,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCC)[*],,No,,,C2H6,Yes,3.2041,3.0538,-0.1503,3.0538,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCC)[*],,No,,,C3H6,Yes,,3.1886,,3.1886,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCC)[*],,No,,,C3H8,Yes,3.6021,3.244,-0.358,3.244,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCC)[*],,No,,,n-C4H10,Yes,,3.2872,,3.2872,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCCCCCCC)[*],,No,,,He,No,,2.1377,,2.1377,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCCCCCCC)[*],,No,,,H2,No,,2.4498,,2.4498,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCCCCCCC)[*],,No,,,N2,No,,1.9374,,1.9374,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCCCCCCC)[*],,No,,,O2,No,,2.2988,,2.2988,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCCCCCCC)[*],,No,,,CH4,No,,2.4843,,2.4843,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCCCCCCC)[*],,No,,,CO2,No,,2.9957,,2.9957,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCCCCCCC)[*],,No,,,C2H4,Yes,2.9031,2.8465,-0.0566,2.8465,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCCCCCCC)[*],,No,,,C2H6,Yes,3.0,2.6872,-0.3128,2.6872,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCCCCCCC)[*],,No,,,C3H6,Yes,,2.7971,,2.7971,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCCCCCCC)[*],,No,,,C3H8,Yes,3.301,2.85,-0.4511,2.85,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCCCCCCC)[*],,No,,,n-C4H10,Yes,,2.8965,,2.8965,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCC(F)(F)F)[*],,No,,,He,No,,2.4213,,2.4213,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCC(F)(F)F)[*],,No,,,H2,No,,2.66,,2.66,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCC(F)(F)F)[*],,No,,,N2,No,,1.9659,,1.9659,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCC(F)(F)F)[*],,No,,,O2,No,,2.313,,2.313,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCC(F)(F)F)[*],,No,,,CH4,No,,2.3297,,2.3297,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCC(F)(F)F)[*],,No,,,CO2,No,,3.1468,,3.1468,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCC(F)(F)F)[*],,No,,,C2H4,Yes,2.6021,2.8009,0.1988,2.8009,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCC(F)(F)F)[*],,No,,,C2H6,Yes,2.4771,2.5737,0.0965,2.5737,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCC(F)(F)F)[*],,No,,,C3H6,Yes,,2.728,,2.728,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCC(F)(F)F)[*],,No,,,C3H8,Yes,2.6128,2.8031,0.1903,2.8031,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(CCC(F)(F)F)[*],,No,,,n-C4H10,Yes,,2.8689,,2.8689,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(c1ccccc1)[*],,No,,,He,No,,1.537,,1.537,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(c1ccccc1)[*],,No,,,H2,No,,1.7298,,1.7298,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(c1ccccc1)[*],,No,,,N2,No,,0.9556,,0.9556,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(c1ccccc1)[*],,No,,,O2,No,,1.4626,,1.4626,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(c1ccccc1)[*],,No,,,CH4,No,,1.5942,,1.5942,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(c1ccccc1)[*],,No,,,CO2,No,,2.408,,2.408,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(c1ccccc1)[*],,No,,,C2H4,Yes,1.9542,2.2865,0.3323,2.2865,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(c1ccccc1)[*],,No,,,C2H6,Yes,1.9542,1.9829,0.0286,1.9829,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(c1ccccc1)[*],,No,,,C3H6,Yes,,2.2196,,2.2196,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(c1ccccc1)[*],,No,,,C3H8,Yes,2.1761,2.298,0.1219,2.298,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(c1ccccc1)[*],,No,,,n-C4H10,Yes,,2.3517,,2.3517,
+Silicone rubber and variants,Silicone rubber and variants,[*][Si](C)(C)C[*],,No,,,He,No,,2.244,,2.244,
+Silicone rubber and variants,Silicone rubber and variants,[*][Si](C)(C)C[*],,No,,,H2,No,,2.4305,,2.4305,
+Silicone rubber and variants,Silicone rubber and variants,[*][Si](C)(C)C[*],,No,,,N2,No,,1.578,,1.578,
+Silicone rubber and variants,Silicone rubber and variants,[*][Si](C)(C)C[*],,No,,,O2,No,,1.9995,,1.9995,
+Silicone rubber and variants,Silicone rubber and variants,[*][Si](C)(C)C[*],,No,,,CH4,No,,2.1097,,2.1097,
+Silicone rubber and variants,Silicone rubber and variants,[*][Si](C)(C)C[*],,No,,,CO2,No,,2.7009,,2.7009,
+Silicone rubber and variants,Silicone rubber and variants,[*][Si](C)(C)C[*],,No,,,C2H4,Yes,2.5441,2.596,0.0519,2.596,
+Silicone rubber and variants,Silicone rubber and variants,[*][Si](C)(C)C[*],,No,,,C2H6,Yes,2.6021,2.3814,-0.2207,2.3814,
+Silicone rubber and variants,Silicone rubber and variants,[*][Si](C)(C)C[*],,No,,,C3H6,Yes,,2.5418,,2.5418,
+Silicone rubber and variants,Silicone rubber and variants,[*][Si](C)(C)C[*],,No,,,C3H8,Yes,3.0,2.5944,-0.4056,2.5944,
+Silicone rubber and variants,Silicone rubber and variants,[*][Si](C)(C)C[*],,No,,,n-C4H10,Yes,,2.638,,2.638,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CC[Si](C)(C)[*],,No,,,He,No,,1.676,,1.676,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CC[Si](C)(C)[*],,No,,,H2,No,,1.7559,,1.7559,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CC[Si](C)(C)[*],,No,,,N2,No,,0.6627,,0.6627,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CC[Si](C)(C)[*],,No,,,O2,No,,1.1941,,1.1941,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CC[Si](C)(C)[*],,No,,,CH4,No,,1.255,,1.255,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CC[Si](C)(C)[*],,No,,,CO2,No,,2.1184,,2.1184,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CC[Si](C)(C)[*],,No,,,C2H4,Yes,3.1761,1.8867,-1.2894,1.8867,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CC[Si](C)(C)[*],,No,,,C2H6,Yes,3.301,1.5673,-1.7338,1.5673,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CC[Si](C)(C)[*],,No,,,C3H6,Yes,,1.798,,1.798,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CC[Si](C)(C)[*],,No,,,C3H8,Yes,3.6021,1.8929,-1.7091,1.8929,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CC[Si](C)(C)[*],,No,,,n-C4H10,Yes,,1.9589,,1.9589,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CCCCCC[Si](C)(C)[*],,No,,,He,No,,1.6917,,1.6917,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CCCCCC[Si](C)(C)[*],,No,,,H2,No,,1.8228,,1.8228,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CCCCCC[Si](C)(C)[*],,No,,,N2,No,,1.0029,,1.0029,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CCCCCC[Si](C)(C)[*],,No,,,O2,No,,1.433,,1.433,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CCCCCC[Si](C)(C)[*],,No,,,CH4,No,,1.543,,1.543,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CCCCCC[Si](C)(C)[*],,No,,,CO2,No,,2.2685,,2.2685,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CCCCCC[Si](C)(C)[*],,No,,,C2H4,Yes,3.0414,2.0443,-0.9971,2.0443,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CCCCCC[Si](C)(C)[*],,No,,,C2H6,Yes,3.1139,1.7993,-1.3146,1.7993,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CCCCCC[Si](C)(C)[*],,No,,,C3H6,Yes,,1.975,,1.975,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CCCCCC[Si](C)(C)[*],,No,,,C3H8,Yes,3.4771,2.0532,-1.4239,2.0532,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CCCCCC[Si](C)(C)[*],,No,,,n-C4H10,Yes,,2.1161,,2.1161,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CCCCCCCC[Si](C)(C)[*],,No,,,He,No,,1.6927,,1.6927,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CCCCCCCC[Si](C)(C)[*],,No,,,H2,No,,1.8429,,1.8429,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CCCCCCCC[Si](C)(C)[*],,No,,,N2,No,,1.0543,,1.0543,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CCCCCCCC[Si](C)(C)[*],,No,,,O2,No,,1.4732,,1.4732,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CCCCCCCC[Si](C)(C)[*],,No,,,CH4,No,,1.5565,,1.5565,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CCCCCCCC[Si](C)(C)[*],,No,,,CO2,No,,2.2833,,2.2833,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CCCCCCCC[Si](C)(C)[*],,No,,,C2H4,Yes,2.9542,2.0579,-0.8964,2.0579,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CCCCCCCC[Si](C)(C)[*],,No,,,C2H6,Yes,3.0212,1.8119,-1.2093,1.8119,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CCCCCCCC[Si](C)(C)[*],,No,,,C3H6,Yes,,1.992,,1.992,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CCCCCCCC[Si](C)(C)[*],,No,,,C3H8,Yes,3.301,2.0654,-1.2356,2.0654,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)CCCCCCCC[Si](C)(C)[*],,No,,,n-C4H10,Yes,,2.1262,,2.1262,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)c1cccc([Si](C)(C)[*])c1,,No,,,He,No,,1.9156,,1.9156,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)c1cccc([Si](C)(C)[*])c1,,No,,,H2,No,,2.1054,,2.1054,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)c1cccc([Si](C)(C)[*])c1,,No,,,N2,No,,1.4737,,1.4737,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)c1cccc([Si](C)(C)[*])c1,,No,,,O2,No,,1.8909,,1.8909,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)c1cccc([Si](C)(C)[*])c1,,No,,,CH4,No,,2.0692,,2.0692,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)c1cccc([Si](C)(C)[*])c1,,No,,,CO2,No,,2.7062,,2.7062,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)c1cccc([Si](C)(C)[*])c1,,No,,,C2H4,Yes,2.4472,2.6687,0.2215,2.6687,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)c1cccc([Si](C)(C)[*])c1,,No,,,C2H6,Yes,2.4771,2.4295,-0.0476,2.4295,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)c1cccc([Si](C)(C)[*])c1,,No,,,C3H6,Yes,,2.5999,,2.5999,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)c1cccc([Si](C)(C)[*])c1,,No,,,C3H8,Yes,2.8451,2.6688,-0.1763,2.6688,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)c1cccc([Si](C)(C)[*])c1,,No,,,n-C4H10,Yes,,2.7246,,2.7246,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)c1ccc([Si](C)(C)[*])cc1,,No,,,He,No,,1.9027,,1.9027,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)c1ccc([Si](C)(C)[*])cc1,,No,,,H2,No,,1.9287,,1.9287,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)c1ccc([Si](C)(C)[*])cc1,,No,,,N2,No,,0.5296,,0.5296,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)c1ccc([Si](C)(C)[*])cc1,,No,,,O2,No,,1.0371,,1.0371,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)c1ccc([Si](C)(C)[*])cc1,,No,,,CH4,No,,1.0715,,1.0715,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)c1ccc([Si](C)(C)[*])cc1,,No,,,CO2,No,,1.7947,,1.7947,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)c1ccc([Si](C)(C)[*])cc1,,No,,,C2H4,Yes,1.301,1.5554,0.2544,1.5554,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)c1ccc([Si](C)(C)[*])cc1,,No,,,C2H6,Yes,1.2553,1.2928,0.0375,1.2928,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)c1ccc([Si](C)(C)[*])cc1,,No,,,C3H6,Yes,,1.4839,,1.4839,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)c1ccc([Si](C)(C)[*])cc1,,No,,,C3H8,Yes,1.4771,1.5629,0.0858,1.5629,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)c1ccc([Si](C)(C)[*])cc1,,No,,,n-C4H10,Yes,,1.6311,,1.6311,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,He,No,,2.541,,2.541,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,H2,No,,2.9102,,2.9102,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,N2,No,,2.4444,,2.4444,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,O2,No,,2.7513,,2.7513,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,CH4,No,,2.9626,,2.9626,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,CO2,No,,3.4943,,3.4943,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,C2H4,Yes,,3.4526,,3.4526,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,C2H6,Yes,3.5185,3.254,-0.2645,3.254,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,C3H6,Yes,,3.3988,,3.3988,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,C3H8,Yes,3.6128,3.4524,-0.1604,3.4524,
+Silicone rubber and variants,Silicone rubber and variants,[*]O[Si](C)(C)[*],,No,,,n-C4H10,Yes,,3.4904,,3.4904,
+Substituted Polyacetylenes,Substituted Polyacetylenes,[*]C(c1ccccc1)=C([*])c1ccc([Si](C(C)C)(C(C)C)C(C)C)cc1,,No,,,He,No,,2.4865,,2.4865,
+Substituted Polyacetylenes,Substituted Polyacetylenes,[*]C(c1ccccc1)=C([*])c1ccc([Si](C(C)C)(C(C)C)C(C)C)cc1,,No,,,H2,No,,2.7727,,2.7727,
+Substituted Polyacetylenes,Substituted Polyacetylenes,[*]C(c1ccccc1)=C([*])c1ccc([Si](C(C)C)(C(C)C)C(C)C)cc1,,No,,,N2,No,,1.9423,,1.9423,
+Substituted Polyacetylenes,Substituted Polyacetylenes,[*]C(c1ccccc1)=C([*])c1ccc([Si](C(C)C)(C(C)C)C(C)C)cc1,,No,,,O2,No,,2.3547,,2.3547,
+Substituted Polyacetylenes,Substituted Polyacetylenes,[*]C(c1ccccc1)=C([*])c1ccc([Si](C(C)C)(C(C)C)C(C)C)cc1,,No,,,CH4,No,,2.3783,,2.3783,
+Substituted Polyacetylenes,Substituted Polyacetylenes,[*]C(c1ccccc1)=C([*])c1ccc([Si](C(C)C)(C(C)C)C(C)C)cc1,,No,,,CO2,No,,3.0597,,3.0597,
+Substituted Polyacetylenes,Substituted Polyacetylenes,[*]C(c1ccccc1)=C([*])c1ccc([Si](C(C)C)(C(C)C)C(C)C)cc1,,No,,,C2H4,Yes,,2.8547,,2.8547,
+Substituted Polyacetylenes,Substituted Polyacetylenes,[*]C(c1ccccc1)=C([*])c1ccc([Si](C(C)C)(C(C)C)C(C)C)cc1,,No,,,C2H6,Yes,2.8808,2.623,-0.2578,2.623,
+Substituted Polyacetylenes,Substituted Polyacetylenes,[*]C(c1ccccc1)=C([*])c1ccc([Si](C(C)C)(C(C)C)C(C)C)cc1,,No,,,C3H6,Yes,,2.7801,,2.7801,
+Substituted Polyacetylenes,Substituted Polyacetylenes,[*]C(c1ccccc1)=C([*])c1ccc([Si](C(C)C)(C(C)C)C(C)C)cc1,,No,,,C3H8,Yes,3.2788,2.8521,-0.4266,2.8521,
+Substituted Polyacetylenes,Substituted Polyacetylenes,[*]C(c1ccccc1)=C([*])c1ccc([Si](C(C)C)(C(C)C)C(C)C)cc1,,No,,,n-C4H10,Yes,3.8633,2.9086,-0.9548,2.9086,
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,1.0,0.0,He,No,,0.5047,,0.5047,1.2049
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,1.0,0.0,H2,No,,0.2216,,0.2216,0.9452
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,1.0,0.0,N2,No,,-1.9438,,-1.9438,-0.1651
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,1.0,0.0,O2,No,,-1.1928,,-1.1928,0.3897
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,1.0,0.0,CH4,No,,-1.8348,,-1.8348,-0.3933
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,1.0,0.0,CO2,No,,-0.6399,,-0.6399,0.7137
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,1.0,0.0,C2H4,Yes,,-1.3852,,-1.3852,0.0252
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,1.0,0.0,C2H6,Yes,,-1.5781,,-1.5781,-0.1962
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,1.0,0.0,C3H6,Yes,-1.2924,-1.4124,-0.1199,-1.4124,-0.0194
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,1.0,0.0,C3H8,Yes,-1.2924,-1.3572,-0.0647,-1.3572,0.0421
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,1.0,0.0,n-C4H10,Yes,,-1.2991,,-1.2991,0.1023
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.75,0.25,He,No,,0.6797,,0.5047,1.2049
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.75,0.25,H2,No,,0.4025,,0.2216,0.9452
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.75,0.25,N2,No,,-1.4991,,-1.9438,-0.1651
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.75,0.25,O2,No,,-0.7972,,-1.1928,0.3897
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.75,0.25,CH4,No,,-1.4744,,-1.8348,-0.3933
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.75,0.25,CO2,No,,-0.3015,,-0.6399,0.7137
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.75,0.25,C2H4,Yes,,-1.0326,,-1.3852,0.0252
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.75,0.25,C2H6,Yes,,-1.2326,,-1.5781,-0.1962
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.75,0.25,C3H6,Yes,0.0,-1.0641,-1.0641,-1.4124,-0.0194
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.75,0.25,C3H8,Yes,-2.3979,-1.0073,1.3906,-1.3572,0.0421
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.75,0.25,n-C4H10,Yes,,-0.9488,,-1.2991,0.1023
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.67,0.33,He,No,,0.7357,,0.5047,1.2049
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.67,0.33,H2,No,,0.4604,,0.2216,0.9452
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.67,0.33,N2,No,,-1.3568,,-1.9438,-0.1651
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.67,0.33,O2,No,,-0.6706,,-1.1928,0.3897
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.67,0.33,CH4,No,,-1.3591,,-1.8348,-0.3933
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.67,0.33,CO2,No,,-0.1932,,-0.6399,0.7137
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.67,0.33,C2H4,Yes,,-0.9198,,-1.3852,0.0252
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.67,0.33,C2H6,Yes,,-1.122,,-1.5781,-0.1962
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.67,0.33,C3H6,Yes,0.8751,-0.9527,-1.8277,-1.4124,-0.0194
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.67,0.33,C3H8,Yes,-2.5229,-0.8954,1.6275,-1.3572,0.0421
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.67,0.33,n-C4H10,Yes,,-0.8366,,-1.2991,0.1023
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.5,0.5,He,No,,0.8548,,0.5047,1.2049
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.5,0.5,H2,No,,0.5834,,0.2216,0.9452
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.5,0.5,N2,No,,-1.0545,,-1.9438,-0.1651
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.5,0.5,O2,No,,-0.4015,,-1.1928,0.3897
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.5,0.5,CH4,No,,-1.1141,,-1.8348,-0.3933
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.5,0.5,CO2,No,,0.0369,,-0.6399,0.7137
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.5,0.5,C2H4,Yes,,-0.68,,-1.3852,0.0252
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.5,0.5,C2H6,Yes,,-0.8871,,-1.5781,-0.1962
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.5,0.5,C3H6,Yes,1.4771,-0.7159,-2.193,-1.4124,-0.0194
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.5,0.5,C3H8,Yes,-2.5229,-0.6575,1.8653,-1.3572,0.0421
+Various Polymers,Various Polymers,[*]N(CC)CC(C([*])=O),[O-]S(=O)(=O)C(F)(F)F.[Ag+],Yes,0.5,0.5,n-C4H10,Yes,,-0.5984,,-1.2991,0.1023
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],,No,,,He,No,,1.3511,,1.3511,
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],,No,,,H2,No,,1.6782,,1.6782,
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],,No,,,N2,No,,1.0244,,1.0244,
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],,No,,,O2,No,,1.3805,,1.3805,
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],,No,,,CH4,No,,1.7243,,1.7243,
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],,No,,,CO2,No,,2.3243,,2.3243,
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],,No,,,C2H4,Yes,,2.2226,,2.2226,
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],,No,,,C2H6,Yes,,2.0228,,2.0228,
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],,No,,,C3H6,Yes,2.1804,2.1602,-0.0201,2.1602,
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],,No,,,C3H8,Yes,2.1052,2.2245,0.1194,2.2245,
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],,No,,,n-C4H10,Yes,,2.2733,,2.2733,
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[Br-],Yes,0.67,0.33,He,No,,0.7159,,1.3511,-0.5739
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[Br-],Yes,0.67,0.33,H2,No,,0.8759,,1.6782,-0.7529
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[Br-],Yes,0.67,0.33,N2,No,,0.119,,1.0244,-1.7193
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[Br-],Yes,0.67,0.33,O2,No,,0.4986,,1.3805,-1.2918
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[Br-],Yes,0.67,0.33,CH4,No,,0.5693,,1.7243,-1.7755
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[Br-],Yes,0.67,0.33,CO2,No,,1.2417,,2.3243,-0.9563
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[Br-],Yes,0.67,0.33,C2H4,Yes,,0.9985,,2.2226,-1.4866
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[Br-],Yes,0.67,0.33,C2H6,Yes,,0.8187,,2.0228,-1.6259
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[Br-],Yes,0.67,0.33,C3H6,Yes,1.9735,0.949,-1.0245,2.1602,-1.5102
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[Br-],Yes,0.67,0.33,C3H8,Yes,-0.5528,1.006,1.5588,2.2245,-1.4681
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[Br-],Yes,0.67,0.33,n-C4H10,Yes,,1.053,,2.2733,-1.4245
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[Cl-],Yes,0.67,0.33,He,No,,0.7252,,1.3511,-0.5457
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[Cl-],Yes,0.67,0.33,H2,No,,0.8913,,1.6782,-0.7061
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[Cl-],Yes,0.67,0.33,N2,No,,0.1483,,1.0244,-1.6304
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[Cl-],Yes,0.67,0.33,O2,No,,0.5311,,1.3805,-1.1933
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[Cl-],Yes,0.67,0.33,CH4,No,,0.6099,,1.7243,-1.6527
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[Cl-],Yes,0.67,0.33,CO2,No,,1.2706,,2.3243,-0.8687
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[Cl-],Yes,0.67,0.33,C2H4,Yes,,1.0418,,2.2226,-1.3555
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[Cl-],Yes,0.67,0.33,C2H6,Yes,,0.8617,,2.0228,-1.4956
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[Cl-],Yes,0.67,0.33,C3H6,Yes,1.6725,0.9918,-0.6807,2.1602,-1.3806
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[Cl-],Yes,0.67,0.33,C3H8,Yes,-0.5528,1.0489,1.6017,2.2245,-1.338
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[Cl-],Yes,0.67,0.33,n-C4H10,Yes,,1.096,,2.2733,-1.2944
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.67,0.33,He,No,,1.3029,,1.3511,1.2049
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.67,0.33,H2,No,,1.4363,,1.6782,0.9452
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.67,0.33,N2,No,,0.6319,,1.0244,-0.1651
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.67,0.33,O2,No,,1.0535,,1.3805,0.3897
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.67,0.33,CH4,No,,1.0255,,1.7243,-0.3933
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.67,0.33,CO2,No,,1.7928,,2.3243,0.7137
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.67,0.33,C2H4,Yes,,1.4974,,2.2226,0.0252
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.67,0.33,C2H6,Yes,,1.2905,,2.0228,-0.1962
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.67,0.33,C3H6,Yes,1.5544,1.441,-0.1134,2.1602,-0.0194
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.67,0.33,C3H8,Yes,-0.5528,1.5043,2.0572,2.2245,0.0421
+Various Polymers,Various Polymers,[*]C=CCCCCCC[*],[Ag+].[O-]S(=O)(=O)C(F)(F)F,Yes,0.67,0.33,n-C4H10,Yes,,1.5569,,2.2733,0.1023
+Vinyl and Vinylidene Polymers,Vinyl and Vinylidene Polymers,[*]CC(Cl)[*],,No,,,He,No,,0.1825,,0.1825,
+Vinyl and Vinylidene Polymers,Vinyl and Vinylidene Polymers,[*]CC(Cl)[*],,No,,,H2,No,,0.1296,,0.1296,
+Vinyl and Vinylidene Polymers,Vinyl and Vinylidene Polymers,[*]CC(Cl)[*],,No,,,N2,No,,-2.0247,,-2.0247,
+Vinyl and Vinylidene Polymers,Vinyl and Vinylidene Polymers,[*]CC(Cl)[*],,No,,,O2,No,,-1.3189,,-1.3189,
+Vinyl and Vinylidene Polymers,Vinyl and Vinylidene Polymers,[*]CC(Cl)[*],,No,,,CH4,No,,-1.5575,,-1.5575,
+Vinyl and Vinylidene Polymers,Vinyl and Vinylidene Polymers,[*]CC(Cl)[*],,No,,,CO2,No,,-0.7437,,-0.7437,
+Vinyl and Vinylidene Polymers,Vinyl and Vinylidene Polymers,[*]CC(Cl)[*],,No,,,C2H4,Yes,1.2639,-1.1231,-2.3869,-1.1231,
+Vinyl and Vinylidene Polymers,Vinyl and Vinylidene Polymers,[*]CC(Cl)[*],,No,,,C2H6,Yes,,-1.2837,,-1.2837,
+Vinyl and Vinylidene Polymers,Vinyl and Vinylidene Polymers,[*]CC(Cl)[*],,No,,,C3H6,Yes,,-1.1338,,-1.1338,
+Vinyl and Vinylidene Polymers,Vinyl and Vinylidene Polymers,[*]CC(Cl)[*],,No,,,C3H8,Yes,,-1.0918,,-1.0918,
+Vinyl and Vinylidene Polymers,Vinyl and Vinylidene Polymers,[*]CC(Cl)[*],,No,,,n-C4H10,Yes,,-1.0508,,-1.0508,
+Vinyl and Vinylidene Polymers,Vinyl and Vinylidene Polymers,[*]CC(O)[*],,No,,,He,No,,-0.5601,,-0.5601,
+Vinyl and Vinylidene Polymers,Vinyl and Vinylidene Polymers,[*]CC(O)[*],,No,,,H2,No,,-0.8693,,-0.8693,
+Vinyl and Vinylidene Polymers,Vinyl and Vinylidene Polymers,[*]CC(O)[*],,No,,,N2,No,,-3.2903,,-3.2903,
+Vinyl and Vinylidene Polymers,Vinyl and Vinylidene Polymers,[*]CC(O)[*],,No,,,O2,No,,-2.3942,,-2.3942,
+Vinyl and Vinylidene Polymers,Vinyl and Vinylidene Polymers,[*]CC(O)[*],,No,,,CH4,No,,-3.0925,,-3.0925,
+Vinyl and Vinylidene Polymers,Vinyl and Vinylidene Polymers,[*]CC(O)[*],,No,,,CO2,No,,-1.5876,,-1.5876,
+Vinyl and Vinylidene Polymers,Vinyl and Vinylidene Polymers,[*]CC(O)[*],,No,,,C2H4,Yes,,-2.3822,,-2.3822,
+Vinyl and Vinylidene Polymers,Vinyl and Vinylidene Polymers,[*]CC(O)[*],,No,,,C2H6,Yes,,-2.6825,,-2.6825,
+Vinyl and Vinylidene Polymers,Vinyl and Vinylidene Polymers,[*]CC(O)[*],,No,,,C3H6,Yes,-1.301,-2.4141,-1.1131,-2.4141,
+Vinyl and Vinylidene Polymers,Vinyl and Vinylidene Polymers,[*]CC(O)[*],,No,,,C3H8,Yes,-1.301,-2.338,-1.037,-2.338,
+Vinyl and Vinylidene Polymers,Vinyl and Vinylidene Polymers,[*]CC(O)[*],,No,,,n-C4H10,Yes,,-2.2527,,-2.2527,

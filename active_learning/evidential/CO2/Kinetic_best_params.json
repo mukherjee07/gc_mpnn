@@ -1,0 +1,13 @@
+{
+  "params": {
+    "learning_rate": 2.214904218133083e-05,
+    "l2_lambda": 0.00524222708006489,
+    "hidden_dim": 512,
+    "num_mp_layers": 5,
+    "fusion_dim": 32,
+    "dropout": 0.04975910889419488,
+    "pooling": "attention",
+    "batch_size": 8
+  },
+  "best_hpo_mse": 0.05776305169676741
+}

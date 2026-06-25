@@ -1,0 +1,61 @@
+#!/bin/bash
+# Purge modules
+module purge
+
+# Load CUDA
+module load cuda/12.2
+
+# Initialize conda from HOME (where miniconda is installed)
+#source ~/miniconda3/etc/profile.d/conda.sh
+
+# Activate environment from WORK (where env is stored)
+conda activate poly_net
+
+# Verify setup
+echo "Python location: $(which python)"
+echo "Python version: $(python --version)"
+nvidia-smi
+
+# Run active learning
+TEST_GAS="CO2"
+EXPERIMENT_NAME="Kinetic"
+N_ACTIVE_VALUES=(5 10 20 40 80)
+STRATEGIES=("uncertainty" "random")
+SRC_DIR="$(pwd)"
+
+# ── Required files check ──────────────────────────────────────
+for f in "${EXPERIMENT_NAME}_ensemble_test_${TEST_GAS}_predictions.csv" \
+          "${EXPERIMENT_NAME}_best_params.json" \
+          "Gas_permeability_solubility_diffusivity_wide.csv" \
+          "gnn_active.py"; do
+    [[ -f "$f" ]] || { echo "Missing: $f"; exit 1; }
+done
+
+# ── Create folders, copy files, patch & run ───────────────────
+for STRATEGY in "${STRATEGIES[@]}"; do
+    for N in "${N_ACTIVE_VALUES[@]}"; do
+
+        FOLDER="${STRATEGY}_${N}"
+        echo "▶  ${FOLDER}"
+        mkdir -p "$FOLDER"
+
+        cp "${EXPERIMENT_NAME}_ensemble_test_${TEST_GAS}_predictions.csv" "$FOLDER/"
+        cp "${EXPERIMENT_NAME}_best_params.json"                          "$FOLDER/"
+        cp "Gas_permeability_solubility_diffusivity_wide.csv"             "$FOLDER/"
+        cp "gnn_active.py"             "$FOLDER/"
+
+        sed \
+            -e "s|^N_ACTIVE\s*=.*|N_ACTIVE           = ${N}|" \
+            -e "s|^SELECTION_STRATEGY\s*=.*|SELECTION_STRATEGY = '${STRATEGY}'|" \
+            -e "s|^TEST_GAS\s*=.*|TEST_GAS           = '${TEST_GAS}'|" \
+            gnn_active.py > "${FOLDER}/gnn_active.py"
+
+        cd "$FOLDER"
+        python gnn_active.py 2>&1 | tee "log_${FOLDER}.txt"
+        cd "$SRC_DIR"
+
+        echo "   done → ${FOLDER}/"
+    done
+done
+
+echo "All runs complete."
