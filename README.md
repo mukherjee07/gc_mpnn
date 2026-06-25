@@ -15,6 +15,20 @@ All code has been developed within the `poly_net` conda environment.
  
 ---
  
+## Associated paper (under review)
+ 
+This repository accompanies the following manuscript, which is currently **under review**:
+ 
+**Gas-Conditioned Message Passing Graph Neural Network for Permeability Prediction in Polymeric Membranes**
+ 
+Krishnendu Mukherjee, Zidan Zhang, Mohammed Alshammasi, Mohammed G. Hashim, Hussain H. Naji, Zainab A. Aithan, Jihad A. Badra, Jalal Yagoubi, Hussain B. Tuwailib, Ali Hayek, and Venkat Ganesan
+ 
+Affiliations:
+- **The University of Texas at Austin** — Krishnendu Mukherjee, Zidan Zhang, Venkat Ganesan
+- **Saudi Aramco** — Mohammed Alshammasi, Mohammed G. Hashim, Hussain H. Naji, Zainab A. Aithan, Jihad A. Badra, Jalal Yagoubi, Hussain B. Tuwailib, Ali Hayek
+ 
+---
+ 
 ## Repository structure
  
 Each folder is self-contained and has its own README with step-by-step
