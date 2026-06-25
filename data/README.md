@@ -54,4 +54,4 @@ manually curated and added by us:
 
 > A. W. Thornton, B. D. Freeman and L. M. Robeson. *Polymer Gas Separation
 > Membrane Database* (2012).
-> https://membrane-australasia.org/polymer-gas-separation-membrane-database/
+> https://membrane-australasia.org/

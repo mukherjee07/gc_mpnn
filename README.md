@@ -9,7 +9,18 @@ McKetta Department of Chemical Engineering — Ganesan Polymer Physics Lab
  
 ## Overview
  
-This repository contains machine learning model: **GC-MPNN** (Graph Convolution Message Passing Neural Network).
+This repository contains the **GC-MPNN** (Gas-Conditioned Message Passing Graph
+Neural Network) model, developed to predict gas permeability through polymer
+membranes — in particular for **out-of-training (unseen) gas species**.
+ 
+GC-MPNN is a **fusion neural network** that integrates two branches:
+- a **graph neural network** (message passing) that learns a representation of
+  the polymer from its structure (SMILES), and
+- a **regular MLP** that encodes each gas species from its molecular properties
+  (thermodynamic, kinetic, electrostatic, and others).
+ 
+The polymer and gas representations are then combined to predict permeability,
+which is what lets the model generalize to gas species it was not trained on.
  
 All code has been developed within the `poly_net` conda environment.
  
@@ -117,7 +128,21 @@ All codes have been tested on:
 - **NVIDIA A100 (40 GB VRAM)** or more — recommended
 - Apple Silicon M4 Pro (earlier versions)
  
-Hyperparameter optimization protocol
+---
+ 
+## Hyperparameter optimization protocol
+ 
+Hyperparameters are tuned with a **leave-one-gas-out (LOGO)** protocol: for each
+held-out test species, the model is optimized on the **5 remaining gas species**
+while that one **test species is always kept out**. Rotating the held-out
+species means **all six gas species are tested this way**, one at a time.
+ 
+For the final-test-set evaluation, the optimization is extended to all **6 gases
+(5 for training + 1 for validation)**. For **each Bayesian (Optuna) iteration**,
+this inner evaluation is **repeated 6 times** — rotating which gas serves as the
+validation gas — and the **mean MSE** across the six rotations is used as the
+objective being minimized.
+ 
 <img width="12657" height="6229" alt="Figure_3" src="https://github.com/user-attachments/assets/28ae56a9-fdb2-4536-a5ce-3941c1a4b8f2" />
  
 ---
@@ -158,4 +183,4 @@ Separation Membrane Database. The polymer SMILES (p-SMILES) in this file were
  
 > A. W. Thornton, B. D. Freeman and L. M. Robeson. *Polymer Gas Separation
 > Membrane Database* (2012).
-> https://membrane-australasia.org/polymer-gas-separation-membrane-database/
+> https://membrane-australasia.org/
