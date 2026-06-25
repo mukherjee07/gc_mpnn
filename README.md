@@ -1,5 +1,7 @@
 # gc-mpnn (gas-conditioned message passing graph neural network) for permeability prediction in polymer membranes
  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20878700.svg)](https://doi.org/10.5281/zenodo.20878700)
+ 
 **Created by Krishnendu Mukherjee**  
 Ganesan Polymer Physics Lab, McKetta Department of Chemical Engineering  
 The University of Texas at Austin

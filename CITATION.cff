@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the following metadata."
+title: "GC-MPNN: Gas-Conditioned Message Passing Graph Neural Network for Permeability Prediction in Polymer Membranes"
+type: software
+authors:
+  - family-names: Mukherjee
+    given-names: Krishnendu
+    affiliation: "Ganesan Polymer Physics Lab, McKetta Department of Chemical Engineering, The University of Texas at Austin"
+doi: 10.5281/zenodo.20878700
+url: "https://github.com/mukherjee07/gc_mpnn"
+repository-code: "https://github.com/mukherjee07/gc_mpnn"
+license: CC-BY-NC-ND-4.0
+version: 1.0.0
+date-released: "2026-06-25"
