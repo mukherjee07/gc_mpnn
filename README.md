@@ -1,6 +1,63 @@
 # gc-mpnn (gas-conditioned message passing graph neural network) for permeability prediction in polymer membranes
 <img width="11875" height="5888" alt="Figure_2" src="https://github.com/user-attachments/assets/e29eaaf7-a15e-48dc-883d-80175755cd30" />
 
+# poly_net — Machine Learning for Polymer Property Prediction
+ 
+**Krishnendu Mukherjee**  
+The University of Texas at Austin  
+McKetta Department of Chemical Engineering — Ganesan Polymer Physics Lab
+ 
+---
+ 
+## Overview
+ 
+This repository contains machine learning surrogate models and reinforcement learning codes for polymer property prediction. The models include **GC-MPNN** (Graph Convolution Message Passing Neural Network) and **OHE-MPNN** (One-Hot Encoding MPNN), along with single- and multi-objective reinforcement learning pipelines.
+ 
+All code has been developed within the `poly_net` conda environment.
+ 
+---
+ 
+## Environment Setup
+ 
+### Prerequisites
+- [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or Anaconda installed
+- CUDA 12.2 (recommended for GPU support)
+### 1. Create the `poly_net` Conda Environment
+ 
+```bash
+conda env create -f environment.yml --name poly_net
+```
+ 
+### 2. Verify and Activate the Environment
+ 
+```bash
+conda env list        # verify poly_net appears in the list
+conda activate poly_net
+```
+ 
+### 3. Install p-smiles Libraries (Manual Step Required)
+ 
+> Due to compatibility issues, these cannot be installed via `environment.yml` and must be installed manually after activation.
+ 
+```bash
+pip install git+https://github.com/Ramprasad-Group/canonicalize_psmiles.git
+pip install git+https://github.com/kuennethgroup/psmiles.git
+```
+ 
+### 4. Install torch-geometric
+ 
+```bash
+pip install torch-geometric
+```
+ 
+---
+ 
+## Hardware Requirements
+ 
+All codes have been tested on:
+- **NVIDIA A100 (40 GB VRAM)** — highly recommended
+- Apple Silicon M4 Pro (earlier versions)
+- 
 Hyperparameter optimization protocol
 <img width="12657" height="6229" alt="Figure_3" src="https://github.com/user-attachments/assets/28ae56a9-fdb2-4536-a5ce-3941c1a4b8f2" />
 
