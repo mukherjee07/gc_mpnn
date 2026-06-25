@@ -47,6 +47,12 @@ To compare strategies, open `gnn_active.py` and edit near the top:
 
 Run Step 2 again for each setting and compare the scores.
 
+## Using a different held-out gas
+
+`CO2` is just the example provided here. To make any other gas the held-out
+species, set `TEST_GAS` to that gas (e.g. `'O2'`) at the top of **both**
+`gnn_evidential_calibrated.py` and `gnn_active.py`, then re-run the two steps.
+
 ## What you get
 
 - `Kinetic_evidential_test_CO2_predictions.csv` — evidential predictions +

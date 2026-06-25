@@ -8,8 +8,11 @@ data and check if that beats adding random ones.
 
 - `ensemble.py` — **Step 1.** Trains the ensemble and saves predictions with
   an uncertainty (`y_std`) for every test polymer.
-- `gnn_active.py` — **Step 2.** Picks polymers to add (by uncertainty or at
-  random), retrains one model, and reports the result.
+- `gnn_active.py` — **Step 2.** The active-learning script. It can run **both**
+  selection strategies — **ensemble-uncertainty** (add the most-uncertain
+  polymers) and the **random** baseline — chosen with `SELECTION_STRATEGY`.
+  (That is what the folder name `ensemble_and_random` refers to.) It picks the
+  polymers, retrains one model, and reports the result.
 - `Kinetic_best_params.json` — the hyperparameters used (already provided).
 - `bash_al`, `ml_job` — cluster job scripts (ignore if running locally).
 
@@ -45,6 +48,12 @@ To compare strategies, open `gnn_active.py` and edit near the top:
 - `SELECTION_STRATEGY` — `'uncertainty'` or `'random'`.
 
 Run Step 2 again for each setting and compare the scores.
+
+## Using a different held-out gas
+
+`CO2` is just the example provided here. To make any other gas the held-out
+species, set `TEST_GAS` to that gas (e.g. `'O2'`) at the top of **both**
+`ensemble.py` and `gnn_active.py`, then re-run the two steps.
 
 ## What you get
 

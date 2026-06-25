@@ -19,6 +19,14 @@ Each folder has its own README with the exact steps. In both cases the order
 is the same: **first** train the uncertainty model, **then** run the active
 learning script.
 
+**Held-out gas:** the examples here use **CO2** as the held-out gas, but any of
+the six gases can be used instead — just set `TEST_GAS` to the desired gas in the
+scripts (see each folder's README). Only the CO2 example is provided here.
+
+**Selection strategies:** the active-learning script runs both the
+**uncertainty-based** selection and the **random** baseline (chosen with
+`SELECTION_STRATEGY`), so you can compare them.
+
 All scripts read the training set from
 `../../../data/Gas_permeability_solubility_diffusivity_wide.csv`.
 
