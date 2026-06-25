@@ -1,8 +1,8 @@
 # gc-mpnn (gas-conditioned message passing graph neural network) for permeability prediction in polymer membranes
  
-**Author --- Krishnendu Mukherjee**  
-The University of Texas at Austin  
-McKetta Department of Chemical Engineering — Ganesan Polymer Physics Lab
+**Created by Krishnendu Mukherjee**  
+Ganesan Polymer Physics Lab, McKetta Department of Chemical Engineering  
+The University of Texas at Austin
  
 ---
  
