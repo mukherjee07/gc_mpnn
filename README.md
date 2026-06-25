@@ -109,10 +109,10 @@ Hyperparameter optimization protocol
 The datasets in `data/` come from prior work by other groups, and we gratefully
 acknowledge them. Please cite the original sources if you use these data.
  
-### Training set — `Gas_permeability_solubility_diffusivity_wide.csv`
+### Primary dataset (training, validation, and testing) — `Gas_permeability_solubility_diffusivity_wide.csv`
  
-This dataset was developed by **Rampi Ramprasad's group**. If you use it, please
-cite:
+This dataset was developed by **Rampi Ramprasad's group** and is used here for
+model **training, validation, and testing**. If you use it, please cite:
  
 > Phan, B.K., Shen, KH., Gurnani, R. et al. *Gas permeability, diffusivity, and
 > solubility in polymers: Simulation-experiment data fusion and multi-task
@@ -131,11 +131,12 @@ cite:
 }
 ```
  
-### Test set — `new_test_set.csv`
+### External test set (testing only) — `new_test_set.csv`
  
-The experimental permeability values were collected from the **Membrane Society
-of Australasia** Polymer Gas Separation Membrane Database. The polymer SMILES
-(p-SMILES) in this file were **manually curated and added by us**.
+This data is used **only for testing/evaluation**. The experimental permeability
+values were collected from the **Membrane Society of Australasia** Polymer Gas
+Separation Membrane Database. The polymer SMILES (p-SMILES) in this file were
+**manually curated and added by us**.
  
 > A. W. Thornton, B. D. Freeman and L. M. Robeson. *Polymer Gas Separation
 > Membrane Database* (2012).
