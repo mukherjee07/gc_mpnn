@@ -15,13 +15,16 @@ data and check if that beats adding random ones.
 
 It reads the training set from `../../../data/Gas_permeability_solubility_diffusivity_wide.csv`.
 
-## What you need (one-time install)
+## Setup
+
+Make sure the `poly_net` environment is set up (one-time install is described in
+the repository's root README), then activate it:
 
 ```bash
-pip install torch torch_geometric pandas numpy scikit-learn scipy rdkit
+conda activate poly_net
 ```
 
-GPU / Apple Silicon / CPU is selected automatically.
+GPU (CUDA) / Apple Silicon (MPS) / CPU is selected automatically.
 
 ## How to run (do these in order)
 

@@ -14,14 +14,16 @@ done in `hyper_opt/`).
 
 It reads the test polymers from `../data/new_test_set.csv`.
 
-## What you need (one-time install)
+## Setup
+
+Make sure the `poly_net` environment is set up (one-time install is described in
+the repository's root README), then activate it:
 
 ```bash
-pip install torch torch_geometric pandas numpy scikit-learn scipy rdkit
+conda activate poly_net
 ```
 
-The script automatically uses your GPU (CUDA), Apple Silicon (MPS), or CPU —
-you don't have to change anything.
+GPU (CUDA) / Apple Silicon (MPS) / CPU is selected automatically.
 
 ## How to run
 
