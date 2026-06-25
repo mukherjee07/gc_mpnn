@@ -1,5 +1,4 @@
 # gc-mpnn (gas-conditioned message passing graph neural network) for permeability prediction in polymer membranes
-<img width="11875" height="5888" alt="Figure_2" src="https://github.com/user-attachments/assets/e29eaaf7-a15e-48dc-883d-80175755cd30" />
  
 **Author --- Krishnendu Mukherjee**  
 The University of Texas at Austin  
@@ -8,6 +7,8 @@ McKetta Department of Chemical Engineering — Ganesan Polymer Physics Lab
 ---
  
 ## Overview
+ 
+<img width="11875" height="5888" alt="Figure_2" src="https://github.com/user-attachments/assets/e29eaaf7-a15e-48dc-883d-80175755cd30" />
  
 This repository contains the **GC-MPNN** (Gas-Conditioned Message Passing Graph
 Neural Network) model, developed to predict gas permeability through polymer
@@ -23,49 +24,6 @@ The polymer and gas representations are then combined to predict permeability,
 which is what lets the model generalize to gas species it was not trained on.
  
 All code has been developed within the `poly_net` conda environment.
- 
----
- 
-## Associated paper (under review)
- 
-This repository accompanies the following manuscript, which is currently **under review**:
- 
-**Gas-Conditioned Message Passing Graph Neural Network for Permeability Prediction in Polymeric Membranes**
- 
-Krishnendu Mukherjee, Zidan Zhang, Mohammed Alshammasi, Mohammed G. Hashim, Hussain H. Naji, Zainab A. Aithan, Jihad A. Badra, Jalal Yagoubi, Hussain B. Tuwailib, Ali Hayek, and Venkat Ganesan
- 
-Affiliations:
-- **The University of Texas at Austin** — Krishnendu Mukherjee, Zidan Zhang, Venkat Ganesan
-- **Saudi Aramco** — Mohammed Alshammasi, Mohammed G. Hashim, Hussain H. Naji, Zainab A. Aithan, Jihad A. Badra, Jalal Yagoubi, Hussain B. Tuwailib, Ali Hayek
- 
----
- 
-## Repository structure
- 
-Each folder is self-contained and has its own README with step-by-step
-instructions. This table is just the map.
- 
-| Folder | What it does |
-|--------|--------------|
-| `data/` | The datasets. Every script reads its data from here. |
-| `final_test/` | Evaluate the **already-trained** model on the external (MSA) test set. Easiest place to start. |
-| `hyper_opt/` | Tune the model and evaluate it on one held-out gas (leave-one-gas-out). |
-| `hyper_opt/all_six_gases/` | Train on all six gases to produce the **pretrained model** used by `final_test/`. |
-| `active_learning/` | Ask which few extra measurements would improve the model most (two variants: ensemble and evidential). |
- 
-**How the pieces fit together**
-- `hyper_opt/all_six_gases/` trains and saves the pretrained model
-  (`gc_mpnn_pretrained_checkpoint.pt`).
-- `final_test/` loads that pretrained model and evaluates it on the external
-  test set (`data/new_test_set.csv`, the MSA data) — the held-out test of the
-  final model. (Note: `hyper_opt/` also produces predictions, but on its
-  internal held-out gas; `final_test/` is the separate external evaluation.)
-- `hyper_opt/` is the held-out-gas study (tune on five gases, test on the sixth).
-- `active_learning/` builds on the same model: first train a model that reports
-  its own uncertainty, then add the most-uncertain samples and re-check.
- 
-Always run a script from inside its own folder, since data paths are relative
-(e.g. `../data/...`).
  
 ---
  
@@ -104,6 +62,35 @@ pip install torch-geometric
  
 ---
  
+## Repository structure
+ 
+Each folder is self-contained and has its own README with step-by-step
+instructions. This table is just the map.
+ 
+| Folder | What it does |
+|--------|--------------|
+| `data/` | The datasets. Every script reads its data from here. |
+| `final_test/` | Evaluate the **already-trained** model on the external (MSA) test set. Easiest place to start. |
+| `hyper_opt/` | Tune the model and evaluate it on one held-out gas (leave-one-gas-out). |
+| `hyper_opt/all_six_gases/` | Train on all six gases to produce the **pretrained model** used by `final_test/`. |
+| `active_learning/` | Ask which few extra measurements would improve the model most (two variants: ensemble and evidential). |
+ 
+**How the pieces fit together**
+- `hyper_opt/all_six_gases/` trains and saves the pretrained model
+  (`gc_mpnn_pretrained_checkpoint.pt`).
+- `final_test/` loads that pretrained model and evaluates it on the external
+  test set (`data/new_test_set.csv`, the MSA data) — the held-out test of the
+  final model. (Note: `hyper_opt/` also produces predictions, but on its
+  internal held-out gas; `final_test/` is the separate external evaluation.)
+- `hyper_opt/` is the held-out-gas study (tune on five gases, test on the sixth).
+- `active_learning/` builds on the same model: first train a model that reports
+  its own uncertainty, then add the most-uncertain samples and re-check.
+ 
+Always run a script from inside its own folder, since data paths are relative
+(e.g. `../data/...`).
+ 
+---
+ 
 ## Quick start
  
 After creating and activating the `poly_net` environment (above), the fastest
@@ -119,14 +106,6 @@ python final_test_evaluation.py
 This prints the evaluation metrics (R², Pearson r, etc.) and writes
 `inference_predictions_all.csv`. See `final_test/README.md` for what the output
 means, and the README inside each folder for the other workflows.
- 
----
- 
-## Hardware Requirements
- 
-All codes have been tested on:
-- **NVIDIA A100 (40 GB VRAM)** or more — recommended
-- Apple Silicon M4 Pro (earlier versions)
  
 ---
  
@@ -147,6 +126,14 @@ validation gas — and the **mean MSE** across the six rotations is used as the
 objective being minimized.
  
 <img width="12657" height="6229" alt="Figure_3" src="https://github.com/user-attachments/assets/28ae56a9-fdb2-4536-a5ce-3941c1a4b8f2" />
+ 
+---
+ 
+## Hardware Requirements
+ 
+All codes have been tested on:
+- **NVIDIA A100 (40 GB VRAM)** or more — recommended
+- Apple Silicon M4 Pro (earlier versions)
  
 ---
  
@@ -187,3 +174,17 @@ Separation Membrane Database. The polymer SMILES (p-SMILES) in this file were
 > A. W. Thornton, B. D. Freeman and L. M. Robeson. *Polymer Gas Separation
 > Membrane Database* (2012).
 > https://membrane-australasia.org/
+ 
+---
+ 
+## Associated paper (under review)
+ 
+This repository accompanies the following manuscript, which is currently **under review**:
+ 
+**Gas-Conditioned Message Passing Graph Neural Network for Permeability Prediction in Polymeric Membranes**
+ 
+Krishnendu Mukherjee, Zidan Zhang, Mohammed Alshammasi, Mohammed G. Hashim, Hussain H. Naji, Zainab A. Aithan, Jihad A. Badra, Jalal Yagoubi, Hussain B. Tuwailib, Ali Hayek, and Venkat Ganesan
+ 
+Affiliations:
+- **The University of Texas at Austin** — Krishnendu Mukherjee, Zidan Zhang, Venkat Ganesan
+- **Saudi Aramco** — Mohammed Alshammasi, Mohammed G. Hashim, Hussain H. Naji, Zainab A. Aithan, Jihad A. Badra, Jalal Yagoubi, Hussain B. Tuwailib, Ali Hayek
