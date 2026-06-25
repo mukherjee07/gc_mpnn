@@ -11,7 +11,7 @@ McKetta Department of Chemical Engineering — Ganesan Polymer Physics Lab
  
 ## Overview
  
-This repository contains machine learning surrogate models and reinforcement learning codes for polymer property prediction. The models include **GC-MPNN** (Graph Convolution Message Passing Neural Network) and **OHE-MPNN** (One-Hot Encoding MPNN), along with single- and multi-objective reinforcement learning pipelines.
+This repository contains machine learning model: **GC-MPNN** (Graph Convolution Message Passing Neural Network).
  
 All code has been developed within the `poly_net` conda environment.
  
@@ -55,7 +55,7 @@ pip install torch-geometric
 ## Hardware Requirements
  
 All codes have been tested on:
-- **NVIDIA A100 (40 GB VRAM)** — highly recommended
+- **NVIDIA A100 (40 GB VRAM)** or more — recommended
 - Apple Silicon M4 Pro (earlier versions)
 - 
 Hyperparameter optimization protocol
