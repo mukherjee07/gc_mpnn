@@ -5,7 +5,37 @@ type: software
 authors:
   - family-names: Mukherjee
     given-names: Krishnendu
-    affiliation: "Ganesan Polymer Physics Lab, McKetta Department of Chemical Engineering, The University of Texas at Austin"
+    affiliation: "The University of Texas at Austin"
+  - family-names: Zhang
+    given-names: Zidan
+    affiliation: "The University of Texas at Austin"
+  - family-names: Alshammasi
+    given-names: Mohammed
+    affiliation: "Saudi Aramco"
+  - family-names: Hashim
+    given-names: "Mohammed G."
+    affiliation: "Saudi Aramco"
+  - family-names: Naji
+    given-names: "Hussain H."
+    affiliation: "Saudi Aramco"
+  - family-names: Aithan
+    given-names: "Zainab A."
+    affiliation: "Saudi Aramco"
+  - family-names: Badra
+    given-names: "Jihad A."
+    affiliation: "Saudi Aramco"
+  - family-names: Yagoubi
+    given-names: Jalal
+    affiliation: "Saudi Aramco"
+  - family-names: Tuwailib
+    given-names: "Hussain B."
+    affiliation: "Saudi Aramco"
+  - family-names: Hayek
+    given-names: Ali
+    affiliation: "Saudi Aramco"
+  - family-names: Ganesan
+    given-names: Venkat
+    affiliation: "The University of Texas at Austin"
 doi: 10.5281/zenodo.20878700
 url: "https://github.com/mukherjee07/gc_mpnn"
 repository-code: "https://github.com/mukherjee07/gc_mpnn"
