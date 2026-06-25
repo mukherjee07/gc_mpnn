@@ -11,14 +11,14 @@ McKetta Department of Chemical Engineering — Ganesan Polymer Physics Lab
 <img width="11875" height="5888" alt="Figure_2" src="https://github.com/user-attachments/assets/e29eaaf7-a15e-48dc-883d-80175755cd30" />
  
 This repository contains the **GC-MPNN** (Gas-Conditioned Message Passing Graph
-Neural Network) model, developed to predict gas permeability through polymer
+Neural Network) model, developed to predict gas permeability in polymer
 membranes — in particular for **out-of-training (unseen) gas species**.
  
 GC-MPNN is a **fusion neural network** that integrates two branches:
 - a **graph neural network** (message passing) that learns a representation of
-  the polymer from its structure (SMILES), and
+  the polymer from its structure (p-SMILES), and
 - a **regular MLP** that encodes each gas species from its molecular properties
-  (thermodynamic, kinetic, electrostatic, and others).
+  (thermodynamic, kinetic, electrostatic, and/or others).
  
 The polymer and gas representations are then combined to predict permeability,
 which is what lets the model generalize to gas species it was not trained on.
