@@ -37,14 +37,18 @@ instructions. This table is just the map.
 | Folder | What it does |
 |--------|--------------|
 | `data/` | The datasets. Every script reads its data from here. |
-| `prediction/` | Test the **already-trained** model on new polymers. Easiest place to start. |
+| `final_test/` | Evaluate the **already-trained** model on the external (MSA) test set. Easiest place to start. |
 | `hyper_opt/` | Tune the model and evaluate it on one held-out gas (leave-one-gas-out). |
-| `hyper_opt/all_six_gases/` | Train on all six gases to produce the **pretrained model** used by `prediction/`. |
+| `hyper_opt/all_six_gases/` | Train on all six gases to produce the **pretrained model** used by `final_test/`. |
 | `active_learning/` | Ask which few extra measurements would improve the model most (two variants: ensemble and evidential). |
  
 **How the pieces fit together**
 - `hyper_opt/all_six_gases/` trains and saves the pretrained model
-  (`gc_mpnn_pretrained_checkpoint.pt`), which `prediction/` then loads.
+  (`gc_mpnn_pretrained_checkpoint.pt`).
+- `final_test/` loads that pretrained model and evaluates it on the external
+  test set (`data/new_test_set.csv`, the MSA data) — the held-out test of the
+  final model. (Note: `hyper_opt/` also produces predictions, but on its
+  internal held-out gas; `final_test/` is the separate external evaluation.)
 - `hyper_opt/` is the held-out-gas study (tune on five gases, test on the sixth).
 - `active_learning/` builds on the same model: first train a model that reports
   its own uncertainty, then add the most-uncertain samples and re-check.
@@ -92,17 +96,17 @@ pip install torch-geometric
 ## Quick start
  
 After creating and activating the `poly_net` environment (above), the fastest
-thing to try is the prediction script, which uses the trained model that is
+thing to try is the final-test script, which uses the trained model that is
 already included:
  
 ```bash
 conda activate poly_net
-cd prediction
+cd final_test
 python final_test_evaluation.py
 ```
  
-This prints the prediction metrics (R², Pearson r, etc.) and writes
-`inference_predictions_all.csv`. See `prediction/README.md` for what the output
+This prints the evaluation metrics (R², Pearson r, etc.) and writes
+`inference_predictions_all.csv`. See `final_test/README.md` for what the output
 means, and the README inside each folder for the other workflows.
  
 ---

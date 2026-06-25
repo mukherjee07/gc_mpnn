@@ -1,7 +1,9 @@
-# Prediction — test the pretrained model
+# Final test — evaluate the pretrained model
 
-This runs the already-trained GC-MPNN model on a set of polymers and reports
-how well it predicts gas permeability.
+This runs the already-trained GC-MPNN model on the external (MSA) test set and
+reports how well it predicts gas permeability. This is the final held-out
+evaluation of the pretrained model (separate from the held-out-gas predictions
+done in `hyper_opt/`).
 
 ## What's in here
 
@@ -26,7 +28,7 @@ you don't have to change anything.
 From inside this folder:
 
 ```bash
-cd prediction
+cd final_test
 python final_test_evaluation.py
 ```
 

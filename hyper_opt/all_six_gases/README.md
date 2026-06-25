@@ -2,7 +2,7 @@
 
 This trains the GC-MPNN on all six gases (He, H2, N2, O2, CH4, CO2) and saves
 a reusable "pretrained" model. That saved model is the one used later in the
-`prediction/` folder (e.g. to predict H2S, which has no labelled data to tune
+`final_test/` folder (e.g. to predict H2S, which has no labelled data to tune
 against).
 
 ## What's in here
@@ -36,6 +36,6 @@ workstation or cluster.
 
 - `gc_mpnn_pretrained.pt` — the trained model weights.
 - `gc_mpnn_pretrained_checkpoint.pt` — a self-contained checkpoint (weights +
-  scalers + settings). **This is the file the `prediction/` script loads.**
+  scalers + settings). **This is the file the `final_test/` script loads.**
 - `all6_optuna_trials.csv` — the tuning history.
 - `all6_best_params.json` — the best hyperparameters.

@@ -12,8 +12,8 @@ folders read their data from here, so keep these files in place.
   the hyper-opt and active-learning scripts use. **Source:** developed by Rampi
   Ramprasad's group (Phan et al., 2024) — see citations below.
 
-- `new_test_set.csv` — separate polymers used by the prediction script
-  (`prediction/final_test_evaluation.py`) **only for testing** the pretrained
+- `new_test_set.csv` — separate polymers used by the final-test script
+  (`final_test/final_test_evaluation.py`) **only for testing** the pretrained
   model. **Source:** experimental data from the Membrane Society of Australasia
   database (Thornton et al., 2012); the p-SMILES were manually curated and added
   by us — see citations below.
